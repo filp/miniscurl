@@ -119,10 +119,38 @@
             }
         }
     },
-    "prompt_expand_url":
+    "popup_list_header":
     {
-        "message": "Insert the URL you wish to expand using $SERVICE$.",
-        "description": "Shown in a popup where the user inserts the URL to expand.",
+        "message": "Please pick a service:",
+        "description": "The small help string shown above the service list in the popup."
+    },
+    "popup_current_tab":
+    {
+        "message": "Current tab",
+        "description": "The current tab button-thing in the URL input in the popup."
+    },
+    "popup_from_clipboard":
+    {
+        "message": "From clipboard",
+        "description": "The from clipboard button-thing in the URL input in the popup."
+    },
+    "popup_shorten_with":
+    {
+        "message": "Shorten with $SERVICE$",
+        "description": "The button text for shortening services.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_expand_with":
+    {
+        "message": "Expand with $SERVICE$",
+        "description": "The button text for expanding services.",
         "placeholders":
         {
             "service":
@@ -131,5 +159,30 @@
                 "example": "ExpandURL"
             }
         }
+    },
+    "try_another_url":
+    {
+        "message": "Try another URL",
+        "description": "The 'Try another URL' link in the popup."
+    },
+    "try_another_service":
+    {
+        "message": "Try another service",
+        "description": "The 'Try another service' link in the popup."
+    },
+    "expandurl_error_OK":
+    {
+        "message": "URL doesn't redirect anywhere",
+        "description": "Error shown when the user tries to expand something that doesn't redirect anywhere."
+    },
+    "expandurl_error_InvalidURL":
+    {
+        "message": "Invalid URL",
+        "description": "Error shown when the user tries to expand something that doesn't exist."
+    },
+    "expandurl_error_InternalError":
+    {
+        "message": "Server error",
+        "description": "Error shown when ExpandURL has an internal error."
     }
 }

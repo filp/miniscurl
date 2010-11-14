@@ -97,7 +97,7 @@ services =
             }
             else
             {
-                return { status: false, msg: data.status };
+                return { status: false, msg: chrome.i18n.getMessage("expandurl_error_" + data.status) };
             }
         },
     }
@@ -122,7 +122,8 @@ if (custom_services)
     });
 }
 
-default_service = {
+default_service =
+{
     name: "",
     site: "",
     register: null,
@@ -145,3 +146,17 @@ $.each(services, function(id, service)
 {
     services[id] = $.extend({}, default_service, service);
 });
+
+sharing_services =
+{
+    twitter:
+    {
+        icon: "img/twitter.png",
+        url: "http://twitter.com/?status=%URL%",
+    },
+    facebook:
+    {
+        icon: "img/facebook.png",
+        url: "http://www.facebook.com/sharer.php?u=%URL%"
+    }
+}
