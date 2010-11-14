@@ -24,10 +24,7 @@ function create_menu()
 		{
             url = data.pageUrl;
             if (url == null) { return; }
-            handle_url(url, get_config("shortener"), function(result)
-            {
-                prompt(chrome.i18n.getMessage(result.status ? "successful_shorten_prompt" : "failed_shorten_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg);
-            });
+            handle_url(url, get_config("shortener"), done_shorten_prompt);
         }
 	});
     
@@ -39,10 +36,7 @@ function create_menu()
 		{
             url = get_url(data);
             if (url == null) { return; }
-            handle_url(url, get_config("shortener"), function(result)
-            {
-                prompt(chrome.i18n.getMessage(result.status ? "successful_shorten_prompt" : "failed_shorten_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg);
-            });
+            handle_url(url, get_config("shortener"), done_shorten_prompt);
         }
 	});
     
@@ -54,10 +48,7 @@ function create_menu()
 		{
             url = get_url(data);
             if (url == null) { return; }
-            handle_url(url, get_config("expander"), function(result)
-            {
-                prompt(chrome.i18n.getMessage(result.status ? "successful_expand_prompt" : "failed_expand_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg);
-            });
+            handle_url(url, get_config("expander"), done_expand_prompt);
         }
 	});
     
@@ -75,10 +66,7 @@ function create_menu()
 		{
             service = get_config("shortener");
             url = prompt(chrome.i18n.getMessage("prompt_shorten_url", get_service(service).name));
-            handle_url(url, service, function(result)
-            {
-                prompt(chrome.i18n.getMessage(result.status ? "successful_shorten_prompt" : "failed_shorten_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg);
-            });
+            handle_url(url, service, done_shorten_prompt);
         }
 	});
     
@@ -90,10 +78,7 @@ function create_menu()
 		{
             service = get_config("expander");
             url = prompt(chrome.i18n.getMessage("prompt_expand_url", get_service(service).name));
-            handle_url(url, service, function(result)
-            {
-                prompt(chrome.i18n.getMessage(result.status ? "successful_expand_prompt" : "failed_expand_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg);
-            });
+            handle_url(url, service, done_expand_prompt);
         }
 	});
 }

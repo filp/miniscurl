@@ -51,7 +51,7 @@
     },
     "successful_shorten_prompt":
     {
-        "message": "Successfully shortened URL using $SERVICE$.",
+        "message": "Successfully shortened URL using $SERVICE$. Click OK to copy the URL to the clipboard.",
         "description": "Shown in a popup to the user when a URL is successfully shortened via the context menu.",
         "placeholders":
         {
@@ -77,7 +77,7 @@
     },
     "successful_expand_prompt":
     {
-        "message": "Successfully expanded URL using $SERVICE$.",
+        "message": "Successfully expanded URL using $SERVICE$. Click OK to open the URL in a new tab.",
         "description": "Shown in a popup to the user when a URL is successfully expanded via the context menu.",
         "placeholders":
         {

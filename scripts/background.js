@@ -14,7 +14,6 @@ default_settings =
     shortener: "tinyurl",
     expander: "expandurl",
 };
-input = $("input");
 
 // initialize
 $(function()
@@ -44,8 +43,7 @@ chrome.extension.onRequest.addListener(function(request, sender, respond)
     }
     else if (request.request == "copy")
     {
-        input.attr("value", request.data).select();
-        document.execCommand("Copy");
+        to_clipboard(request.data);
     }
 });
 
@@ -102,6 +100,27 @@ function handle_url(url, service_id, callback)
             callback({ status: false, msg: chrome.i18n.getMessage("ajax_" + error) });
         },
     });
+}
+
+function done_shorten_prompt(result)
+{
+    if (prompt(chrome.i18n.getMessage(result.status ? "successful_shorten_prompt" : "failed_shorten_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg) != null && result.status)
+    {
+        to_clipboard(result.msg);
+    }
+}
+function done_expand_prompt(result)
+{
+    if (prompt(chrome.i18n.getMessage(result.status ? "successful_expand_prompt" : "failed_expand_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg) != null && result.status)
+    {
+        chrome.tabs.create({ url: result.msg });
+    }
+}
+
+function to_clipboard(data)
+{
+    $("input").attr("value", data).select();
+    document.execCommand("Copy");
 }
 
 // initialize settings
