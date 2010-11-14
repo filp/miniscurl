@@ -35,7 +35,7 @@ function set_config(idx, val)
 
 function get_service(idx)
 {
-    return $.extend(services[idx], storage_get("services")[idx]);
+    return $.extend({}, services[idx], storage_get("services")[idx]);
 }
 
 function set_service(service, idx, val)

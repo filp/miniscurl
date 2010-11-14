@@ -1,7 +1,8 @@
 {
-	"name": "Miniscurl Universal URL Shortener/Expander",
-	"version": "3.0",
-	"description": "Shortens and expands URLs quick and easily, with just a right click!",
-	"background_page": "background.html",
-	"permissions": ["http://*/*"]
+    "name": "Miniscurl Universal URL Shortener/Expander",
+    "version": "3.0",
+    "description": "Shortens and expands URLs quick and easily, with just a right click!",
+    "background_page": "background.html",
+    "permissions": ["http://*/*", "contextMenus"],
+    "default_locale": "en"
 }

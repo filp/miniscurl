@@ -1,0 +1,135 @@
+{
+    "shorten_this":
+    {
+        "message": "Shorten this",
+        "description": "The context menu option to shorten the right-clicked item."
+    },
+    "shorten_any":
+    {
+        "message": "Shorten any...",
+        "description": "The context menu option to shorten any URL."
+    },
+    "shorten_tab":
+    {
+        "message": "Shorten current tab",
+        "description": "The context menu option to shorten the current tab URL."
+    },
+    "expand_this":
+    {
+        "message": "Expand this",
+        "description": "The context menu option to expand the right-clicked item."
+    },
+    "expand_any":
+    {
+        "message": "Expand any...",
+        "description": "The context menu option to expand any URL."
+    },
+    "ajax_error":
+    {
+        "message": "Unknown error",
+        "description": "The error shown to the user when an unknown error occurs."
+    },
+    "ajax_timeout":
+    {
+        "message": "Service timeout",
+        "description": "The error shown to the user when a timeout occurs."
+    },
+    "ajax_parsererror":
+    {
+        "message": "Error parsing data",
+        "description": "The error shown to the user when a parser error occurs."
+    },
+    "internal_error":
+    {
+        "message": "Internal error",
+        "description": "The error shown to the user when an exception occurs."
+    },
+    "invalid_url":
+    {
+        "message": "Invalid URL",
+        "description": "The error shown to the user when the input URL is invalid."
+    },
+    "successful_shorten_prompt":
+    {
+        "message": "Successfully shortened URL using $SERVICE$.",
+        "description": "Shown in a popup to the user when a URL is successfully shortened via the context menu.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "failed_shorten_prompt":
+    {
+        "message": "An error occured while shortening URL using $SERVICE$.",
+        "description": "Shown in a popup to the user when a URL is unsuccessfully shortened via the context menu.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "successful_expand_prompt":
+    {
+        "message": "Successfully expanded URL using $SERVICE$.",
+        "description": "Shown in a popup to the user when a URL is successfully expanded via the context menu.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "failed_expand_prompt":
+    {
+        "message": "An error occured while expanding URL using $SERVICE$.",
+        "description": "Shown in a popup to the user when a URL is unsuccessfully expanded via the context menu.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "original_url":
+    {
+        "message": "Original URL:",
+        "description": "Shown above the original URL in popups from context menu."
+    },
+    "prompt_shorten_url":
+    {
+        "message": "Insert the URL you wish to shorten using $SERVICE$.",
+        "description": "Shown in a popup where the user inserts the URL to shorten.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "prompt_expand_url":
+    {
+        "message": "Insert the URL you wish to expand using $SERVICE$.",
+        "description": "Shown in a popup where the user inserts the URL to expand.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    }
+}

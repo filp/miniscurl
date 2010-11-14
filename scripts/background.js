@@ -14,18 +14,13 @@ default_settings =
     shortener: "tinyurl",
     expander: "expandurl",
 };
-ajax_errors =
-{
-    timeout: "Service unavailable",
-    error: "Unknown error",
-    parsererror: "Error parsing data",
-};
 input = $("input");
 
 // initialize
 $(function()
 {
     init_settings();
+    create_menu();
 });
 
 // handle messages
@@ -45,11 +40,7 @@ chrome.extension.onRequest.addListener(function(request, sender, respond)
         {
             service = get_config("shortener");
         }
-        if (!(service in services))
-        {
-            return { status: false, msg: "Invalid service" };
-        }
-        return handle_url(request.url, service);
+        handle_url(request.url, service, respond);
     }
     else if (request.request == "copy")
     {
@@ -59,9 +50,15 @@ chrome.extension.onRequest.addListener(function(request, sender, respond)
 });
 
 // shorten/expand a URL
-function handle_url(url, service_id)
+function handle_url(url, service_id, callback)
 {
     service = get_service(service_id);
+    
+    // fix urls
+    if (!url.match(/^\w+:\/\/.*/))
+    {
+        url = "http://" + url;
+    }
     
     // call the data function or replace string components
     if (typeof(service.data) == "function")
@@ -92,13 +89,17 @@ function handle_url(url, service_id)
             }
             catch (err)
             {
-                result = { status: false, msg: "Internal error." };
+                result = { status: false, msg: chrome.i18n.getMessage("internal_error") };
             }
-            return result;
+            callback(result);
         },
         error: function(xhr, error)
         {
-            return { status: false, msg: error == null ? "Unknown error" : ajax_errors[error] };
+            if (error == null)
+            {
+                error = "error";
+            }
+            callback({ status: false, msg: chrome.i18n.getMessage("ajax_" + error) });
         },
     });
 }
