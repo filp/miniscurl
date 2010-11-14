@@ -11,7 +11,7 @@
 // constants
 default_settings =
 {
-    shortener: "tinyurl",
+    shortener: "tinyarrows",
     expander: "expandurl",
 };
 
@@ -133,6 +133,7 @@ function init_settings()
         service_settings[id] = {};
     });
     storage_set("services", service_settings);
+    storage_set("custom_services", [{ id: "tinyarrows", code: '{ name: "TinyArro.ws", site: "http://tinyarro.ws", categories:["shortening"], url: "http://tinyarro.ws/api-create.php", data: "utfpure=1&url=%URL%" }' }]);
     fix_services();
     // TODO: import from 2.x
 }

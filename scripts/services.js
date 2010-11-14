@@ -103,6 +103,25 @@ services =
     }
 };
 
+// load custom
+custom_services = storage_get("custom_services");
+if (custom_services)
+{
+    $.each(custom_services, function(id, data)
+    {
+        // we have to use eval to be able to load functions. even if it's evil.
+        eval("service = " + data.code);
+        if (services[data.id])
+        {
+            alert(chrome.i18n.getMessage("id_taken", [data.id, service.name]));
+        }
+        else
+        {
+            services[data.id] = service;
+        }
+    });
+}
+
 default_service = {
     name: "",
     site: "",
