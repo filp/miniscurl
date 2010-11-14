@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type="text/javascript" src="scripts/jquery-1.4.3.min.js"></script>
+		<script type="text/javascript" src="scripts/library.js"></script>
+		<script type="text/javascript" src="scripts/services.js"></script>
+		<script type="text/javascript" src="scripts/popup.js"></script>
+	</head>
+	<body class="popup">
+		<div id="list">
+            <div id="listhelper">Please pick a service:</div>
+            <ul class="popup">
+                <!-- dynamically populated -->
+                <li>TinyURL</li>
+                <li>Goo.gl</li>
+                <li>ExpandURL</li>
+            </ul>
+        </div>
+        <div id="main">
+            <div id="input">
+                <input class="popup"></input>
+                <div id="helpers">
+                    <span id="cur_tab" class="inputhelper"><a href="#">Current tab</a></span>
+                    <span id="from_clip" class="inputhelper"><a href="#">From clipboard</a></span>
+                </div>
+            </div>
+            <button class="popup">Shorten</button>
+            <div id="sharers">
+                <!-- dynamically populated -->
+                <span class="sharer">
+                    <a href="#"><img src="http://twitter-badges.s3.amazonaws.com/t_small-b.png" title="Share on Twitter"></img></a>
+                </span>
+            </div>
+            <span id="another_url">
+                &lt; <a href="#">Try another URL</a>
+            </span>
+            <span id="another_service">
+                &lt; <a href="#">Try another service</a>
+            </span>
+        </div>
+	</body>
+</html>

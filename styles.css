@@ -1,0 +1,162 @@
+body
+{
+    min-width: 300px;
+    padding: 10px;
+    overflow: auto;
+    
+	font-family: Calibri, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #EAF7E6;
+    
+	background: -webkit-gradient(linear, left top, 0 150, from(#0093bd), to(#00c0ff));
+}
+
+body.popup
+{
+	overflow-x: hidden;
+}
+
+div
+{
+    margin: 0;
+    padding: 0;
+}
+
+div#list
+{
+}
+
+ul.popup
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+ul.popup > li
+{
+    padding: 5px;
+}
+
+ul.popup > li:hover
+{
+    cursor: pointer;
+    background: #4B4B4B;
+	font-weight: bold;
+}
+
+div#main
+{
+}
+
+a
+{
+	color: #EAF7E6;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+input.popup
+{
+    width: 300px;
+    height: 25px;
+	padding: 4px;
+    padding-bottom: 9px;
+	font-size: 14px;
+	border: none;
+	border-radius: 5px;
+	
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	background-size: 16px;
+}
+
+div#helpers
+{
+    height: 20px;
+    position: relative;
+    top: -5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #4B4B4B;
+}
+
+div#listhelper
+{
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+span.inputhelper
+{
+    margin: 0 5px;
+}
+
+span.inputhelper > a
+{
+    color: #4B4B4B;
+    text-decoration: none;
+}
+
+span#cur_tab
+{
+    float: left;
+}
+
+span#from_clip
+{
+    float: right;
+}
+
+button
+{
+	color: #EAF7E6;
+	background-color: #4B4B4B;
+    
+	border-radius: 4px;
+	border: none;
+	clear: both;
+    display: block;
+	width: 125px;
+	height: 31px;
+	font-weight: bold;
+}
+
+button:hover
+{
+	cursor: pointer;
+    background-color: #A0A0A0;
+}
+
+button.popup
+{
+    
+    width: 308px;
+    margin-top: 10px;
+	
+    background-repeat: no-repeat;
+	background-position: 5px center;
+	background-size: 16px;
+}
+
+div#sharers
+{
+    margin-top: 10px;
+    text-align: center;
+}
+
+span#another_url, span#another_service
+{
+    text-align: center;
+    display: block;
+    margin: 0;
+}
