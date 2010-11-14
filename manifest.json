@@ -2,6 +2,12 @@
     "name": "Miniscurl Universal URL Shortener/Expander",
     "version": "3.0",
     "description": "Shortens and expands URLs quick and easily, with just a right click!",
+    "icons":
+    {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
     "background_page": "background.html",
     "permissions": ["http://*/*", "contextMenus"],
     "default_locale": "en"
