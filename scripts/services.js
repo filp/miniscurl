@@ -152,11 +152,11 @@ sharing_services =
     twitter:
     {
         icon: "img/twitter.png",
-        url: "http://twitter.com/?status=%URL%",
+        url: "http://twitter.com/?status=%MSG%",
     },
     facebook:
     {
         icon: "img/facebook.png",
-        url: "http://www.facebook.com/sharer.php?u=%URL%"
+        url: "http://www.facebook.com/sharer.php?u=%MSG%"
     }
 }

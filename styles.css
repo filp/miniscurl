@@ -1,6 +1,7 @@
 body
 {
     min-width: 300px;
+    min-height: 175px;
     padding: 10px;
     overflow: auto;
     
@@ -24,6 +25,7 @@ div
 
 div#list
 {
+    display: none;
 }
 
 ul.popup
@@ -50,6 +52,7 @@ ul.popup > li:hover
 
 div#main
 {
+    display: none;
 }
 
 a
@@ -65,28 +68,29 @@ a:hover
 
 input.popup
 {
-    width: 300px;
+    width: 290px;
     height: 25px;
-	padding: 4px;
-    padding-bottom: 9px;
-	font-size: 14px;
+	padding: 5px;
+    padding-bottom: 10px;
+	font-size: 16px;
 	border: none;
 	border-radius: 5px;
-	
+    margin-bottom: 5px;
+    
 	background-repeat: no-repeat;
-	background-position: 5px center;
+	background-position: 6px center;
 	background-size: 16px;
 }
 
 div#helpers
 {
     height: 20px;
-    position: relative;
-    top: -5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: #FFFFFF;
-    border-top: 1px solid #4B4B4B;
+    position: relative;
+    top: -10px;
+    margin: 0;
 }
 
 div#listhelper
@@ -99,6 +103,7 @@ div#listhelper
 span.inputhelper
 {
     margin: 0 5px;
+    font-size: 14px;
 }
 
 span.inputhelper > a
@@ -140,8 +145,8 @@ button:hover
 button.popup
 {
     
-    width: 308px;
-    margin-top: 10px;
+    width: 300px;
+    margin: 5px 0;
 	
     background-repeat: no-repeat;
 	background-position: 5px center;
@@ -150,13 +155,21 @@ button.popup
 
 div#sharers
 {
-    margin-top: 10px;
+    display: none;
+    margin: 10px 0;
     text-align: center;
 }
 
-span#another_url, span#another_service
+span.sharer
 {
+    cursor: pointer;
+    margin: 2px;
+}
+
+div#anothers
+{
+    width: 300px;
+    position: absolute;
+    bottom: 16px;
     text-align: center;
-    display: block;
-    margin: 0;
 }

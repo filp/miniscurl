@@ -1,5 +1,5 @@
 /*
- * storage.js
+ * library.js
  * Helper methods for Miniscurl
  *
  * Copyright (C) 2010 Håvard Pettersson.
