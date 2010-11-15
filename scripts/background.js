@@ -25,21 +25,18 @@ $(function()
 // handle messages
 chrome.extension.onRequest.addListener(function(request, sender, respond)
 {
-    if (request.request == "shorten" || request.request == "expand")
+    if (request.service)
     {
-        if ("service" in request)
-        {
-            service = request.service;
-        }
-        else if (request.request == "expand")
-        {
-            service = get_config("expander");
-        }
-        else
-        {
-            service = get_config("shortener");
-        }
-        handle_url(request.url, service, respond);
+        handle_url(request.url, request.service, respond);
+    }
+    else if (request.request == "shorten")
+    {
+        handle_url(request.url, get_config("shortener"), respond);
+    }
+    else if (request.request == "expand")
+    {
+        service = get_config("expander");
+        handle_url(request.url, get_config("expander"), respond);
     }
     else if (request.request == "copy")
     {
