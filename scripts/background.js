@@ -8,12 +8,13 @@
  * See the attached LICENSE for more information.
  */
 
-// constants
+// constants/globals
 default_settings =
 {
     shortener: "tinyarrows",
     expander: "expandurl",
 };
+var services;
 
 // initialize
 $(function()
@@ -130,7 +131,8 @@ function init_settings()
         service_settings[id] = {};
     });
     storage_set("services", service_settings);
-    storage_set("custom_services", [{ id: "tinyarrows", code: '{ name: "TinyArro.ws", site: "http://tinyarro.ws", categories:["shortening"], url: "http://tinyarro.ws/api-create.php", data: "utfpure=1&url=%URL%" }' }]);
+    storage_set("custom_services", []);
+    services = get_services();
     fix_services();
     // TODO: import from 2.x
 }

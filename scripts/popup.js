@@ -9,11 +9,13 @@
  */
 
 // global vars
-var doc, cur_service, cur_service_id, ongoing_request;
+var doc, cur_service, cur_service_id, ongoing_request, services, sharers;
 
 // initialize
 $(function()
 {
+    services = get_services();
+    sharers = get_sharers();
     ongoing_request = false;
     doc =
     {
@@ -39,7 +41,7 @@ $(function()
     });
     
     // add sharing stuff
-    $.each(sharing_services, function(id, service)
+    $.each(sharers, function(id, service)
     {
         doc.sharers.append("<span>").children().last().addClass("sharer").append("<img>").children().last().attr("src", service.icon).attr("name", id);
     });
@@ -116,6 +118,7 @@ function get_url()
 {
     ongoing_request = false;
     
+    doc.input.css("background-color", "#FFF");
     $("div#sharers").hide();
     if (!$("div#main:visible").size() > 0)
     {
@@ -172,15 +175,23 @@ function done(data)
 {
     if (!ongoing_request) { return; }
     $("div#another_url").fadeIn();
-    $("div#sharers img").click(function()
-    {
-        chrome.tabs.create({ url: sharing_services[$(this).attr("name")].url.replace("%MSG%", data.msg) });
-    });
-    doc.sharers.slideDown();
-	doc.input.attr("readonly", false).val(data.msg);
+	doc.input.attr("readonly", true).val(data.msg);
     set_icon(cur_service.site + "/favicon.ico");
     doc.button.text("Copy to clipboard");
     button_handler = copy;
+    if (data.status)
+    {
+        $("div#sharers img").click(function()
+        {
+            chrome.tabs.create({ url: sharers[$(this).attr("name")].url.replace("%MSG%", data.msg) });
+        });
+        doc.sharers.slideDown();
+        doc.input.css("background-color", "#DCFFDC");
+    }
+    else
+    {
+        doc.input.css("background-color", "#FFDCDC");
+    }
 }
 
 // copy input to clipboard

@@ -112,6 +112,11 @@ span.inputhelper > a
     text-decoration: none;
 }
 
+span.inputhelper > a:hover
+{
+    color: #000;
+}
+
 span#cur_tab
 {
     float: left;
@@ -172,4 +177,9 @@ div#anothers
     position: absolute;
     bottom: 16px;
     text-align: center;
+}
+
+div#anothers span:hover
+{
+
 }

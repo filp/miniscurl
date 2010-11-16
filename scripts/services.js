@@ -8,6 +8,9 @@
  * See the attached LICENSE for more information.
  */
 
+function get_services()
+{
+
 services = 
 {
     tinyurl:
@@ -109,14 +112,13 @@ if (custom_services)
 {
     $.each(custom_services, function(id, data)
     {
-        // we have to use eval to be able to load functions. even if it's evil.
-        eval("service = " + data.code);
-        if (services[data.id])
+        if (data.id in services)
         {
             alert(chrome.i18n.getMessage("id_taken", [data.id, service.name]));
         }
         else
         {
+            eval("service = " + data.code);
             services[data.id] = service;
         }
     });
@@ -146,17 +148,28 @@ $.each(services, function(id, service)
 {
     services[id] = $.extend({}, default_service, service);
 });
+    
+    return services;
+}
 
-sharing_services =
+function get_sharers()
 {
-    twitter:
-    {
-        icon: "img/twitter.png",
-        url: "http://twitter.com/?status=%MSG%",
-    },
-    facebook:
-    {
-        icon: "img/facebook.png",
-        url: "http://www.facebook.com/sharer.php?u=%MSG%"
+
+    return {
+        twitter:
+        {
+            icon: "img/twitter.png",
+            url: "http://twitter.com/?status=%MSG%",
+        },
+        facebook:
+        {
+            icon: "img/facebook.png",
+            url: "http://www.facebook.com/sharer.php?u=%MSG%"
+        },
+        reddit:
+        {
+            icon: "img/reddit.png",
+            url: "http://reddit.com/submit?url=%MSG%"
+        },
     }
 }

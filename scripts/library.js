@@ -8,6 +8,8 @@
  * See the attached LICENSE for more information.
  */
 
+services = get_services();
+
 // miniscurl version
 VERSION = "3.0";
 
