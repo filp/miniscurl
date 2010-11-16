@@ -1,3 +1,8 @@
+html
+{
+    min-height: 100%;
+}
+
 body
 {
     min-width: 300px;
@@ -9,12 +14,73 @@ body
 	font-size: 16px;
 	color: #EAF7E6;
     
-	background: -webkit-gradient(linear, left top, 0 150, from(#0093bd), to(#00c0ff));
+	background: -webkit-gradient(linear, left top, 0 150, from(#0093BD), to(#00C0FF));
 }
 
 body.popup
 {
 	overflow-x: hidden;
+}
+
+body.options
+{
+    overflow-y: scroll;
+	color: #4B4B4B;
+	width: 55%;
+	margin: 100px auto;
+	min-width: 550px;
+}
+
+fieldset
+{
+	background-color: #FFF;
+	border: none;
+	min-width: 100%;
+    padding: 0 0 30px 0;
+	
+	-webkit-box-shadow: 0 0 30px #0085B2;
+}
+
+img#icon
+{
+    float: left;
+}
+
+h1
+{
+    font-family: Lobster, serif;
+    font-size: 42px;
+    display: inline;
+    margin-left: 20px;
+    position: relative;
+    top: 40px;
+}
+
+h2.tab
+{
+    font-size: 21px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #EAF7E6;
+    background-color: #A0A0A0;
+    padding: 3px 7px;
+    margin: 2px 0;
+}
+
+h2.tab:hover
+{
+	cursor: pointer;
+    background-color: #4B4B4B;
+}
+
+h2.selected
+{
+    background-color: #4B4B4B;
+}
+
+h2.selected:hover
+{
+    cursor: default !important;
 }
 
 div
@@ -26,6 +92,25 @@ div
 div#list
 {
     display: none;
+}
+
+div#header
+{
+    min-height: 128px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+div#options
+{
+	width: 500px;
+	margin: 0 auto;
+}
+
+div.pane
+{
+    display: none;
+    margin: 20px 0 30px 0;
 }
 
 ul.popup
@@ -98,6 +183,12 @@ div#listhelper
     text-align: center;
     font-size: 11px;
     margin-bottom: 5px;
+}
+
+div#button
+{
+    width: 125px;
+    margin: 0 auto;
 }
 
 span.inputhelper
@@ -179,7 +270,103 @@ div#anothers
     text-align: center;
 }
 
-div#anothers span:hover
+label
 {
+    text-align: right;
+    font-size: 18px;
+    display: block;
+    float: left;
+    width: 220px;
+    margin: 10px 10px 0 0;
+}
 
+span.small
+{
+    font-size: 14px;
+    color: #A0A0A0;
+    display: block;
+}
+
+span.small#last
+{
+    margin-bottom: 30px;
+}
+
+label.credentials
+{
+    position: relative;
+    top: -6px;
+}
+
+label.checkbox
+{
+    text-align: left;
+    margin: 10px 0 0 10px;
+}
+
+input.options, select
+{
+    float: left;
+	width: 220px;
+	height: 30px;
+	margin: 7px 0 20px 10px;
+	font-size: 14px;
+	border: 1px solid #A0A0A0;
+	border-radius: 3px;
+}
+
+input.options
+{
+    width: 215px;
+}
+
+input[type=checkbox]
+{
+    width: 20px;
+    height: 20px;
+	margin: 20px 5px 20px 0;
+}
+
+div.checkbox
+{
+	text-align: right;
+	float: left;
+	clear: left;
+    width: 220px;
+}
+
+ul#services
+{
+    border: 1px solid #A0A0A0;
+    border-radius: 3px;
+    list-style: none;
+    height: 200px;
+    overflow-y: scroll;
+	overflow-x: hidden;
+    width: 218px;
+    padding: 2px 0 0 0;
+    position: relative;
+    left: 10px;
+    top: 7px;
+}
+
+ul#services input
+{
+    width: auto;
+    height: auto;
+    margin: 2px 3px;
+}
+
+ul#services label
+{
+    margin: 0;
+    font-size: 13px;
+    text-align: left;
+    display: block;
+}
+
+ul#services label:hover
+{
+    background: #A0A0A0;
+    color: #FFF;
 }

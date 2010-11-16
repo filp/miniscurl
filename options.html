@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type="text/javascript" src="scripts/jquery-1.4.3.min.js"></script>
+		<script type="text/javascript" src="scripts/services.js"></script>
+		<script type="text/javascript" src="scripts/library.js"></script>
+		<script type="text/javascript" src="scripts/options.js"></script>
+	</head>
+	<body class="options">
+		<fieldset>
+            <div id="header">
+                <img src="img/icon128.png" id="icon">
+                <h1>Miniscurl Options</h1>
+            </div>
+            <div id="options">
+                <h2 name="general" class="tab">General</h2>
+                <h2 name="popup" class="tab">Popup options</h2>
+                <h2 name="credentials" class="tab">Credentials</h2>
+                <h2 name="custom" class="tab">Custom services</h2>
+                
+                <div name="general" class="pane">
+                    <label for="shortener">Default shortener</label>
+                    <select id="shortener">
+                        <option>lol</option>
+                        <option>lolwat</option>
+                        <option>lolwtfbbq</option>
+                    </select>
+                    
+                    <label for="expander">Default expander</label>
+                    <select id="expander">
+                        <option>lol</option>
+                        <option>lolwat</option>
+                        <option>lolwtfbbq</option>
+                    </select>
+                    
+                    <label>Enabled services</label>
+                    <ul id="services">
+                        <li><label for="o1"><input id="o1" name="o1" type="checkbox">ExpandURL</label></li>
+                        <li><label for="o2"><input id="o2" name="o2" type="checkbox">TinyURL</label></li>
+                    </ul>
+                </div>
+
+                <div name="popup" class="pane">
+                    <div class="checkbox">
+                        <input id="default" type="checkbox">
+                    </div>
+                    <label class="checkbox" for="default">Use default service
+                        <span class="small">Automatically uses the default shortening service instead of prompting you</span>
+                    </label>
+                    
+                    <div class="checkbox">
+                        <input id="quick" type="checkbox">
+                    </div>
+                    <label class="checkbox" for="quick">Quick mode
+                        <span class="small">Automatically uses current tab URL for shortening services</span>
+                    </label>
+                    
+                    <div class="checkbox">
+                        <input id="clipboard" type="checkbox">
+                    </div>
+                    <label class="checkbox" for="quick">Auto-copy
+                        <span class="small" id="last">Automatically copies the shortened/expanded URL to the clipboard</span>
+                    </label>
+                </div>
+
+                <div name="credentials" class="pane">
+                    <label for="service">Service</label>
+                    <select id="service">
+                        <option>lol</option>
+                        <option>lolwat</option>
+                        <option>lolwtfbbq</option>
+                    </select>
+                    
+                    <label for="user" class="credentials">Username
+                        <span class="small">Required</span>
+                    </label>
+                    <input class="options" type="text" id="user" spellcheck="false">
+                    
+                    <label for="pass" class="credentials">Password
+                        <span class="small">Required</span>
+                    </label>
+                    <input class="options" type="password" id="pass" spellcheck="false">
+                    
+                    <label for="api" class="credentials">API Key
+                        <span class="small">Required</span>
+                    </label>
+                    <input class="options" type="text" id="api" spellcheck="false">
+                </div>
+
+                <div name="custom" class="pane">
+                    TODO
+                </div>
+                <div id="button">
+                    <button id="save">Save</button>
+                </div>
+            </div>
+        </fieldset>
+	</body>
+</html>
