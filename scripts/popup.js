@@ -25,6 +25,13 @@ $(function()
         sharers: $("div#sharers"),
     };
     
+    // initialize labels etc from i18n
+    $("div#listhelper").text(chrome.i18n.getMessage("popup_pick"));
+    $("span#cur_tab a").text(chrome.i18n.getMessage("popup_cur_tab"));
+    $("span#from_clip a").text(chrome.i18n.getMessage("popup_from_clip"));
+    $("div#another_url a").text(chrome.i18n.getMessage("popup_another_url"));
+    $("div#another_service a").text(chrome.i18n.getMessage("popup_another_service"));
+    
     // populate service list
     $.each(services, function(id)
     {
@@ -135,11 +142,11 @@ function get_url()
     
     if (cur_service.categories.indexOf("expanding") >= 0)
     {
-        doc.button.text("Expand using " + cur_service.name);
+        doc.button.text(chrome.i18n.getMessage("popup_expand", cur_service.name));
     }
     else
     {
-        doc.button.text("Shorten using " + cur_service.name);
+        doc.button.text(chrome.i18n.getMessage("popup_shorten", cur_service.name));
     }
     
     $("div#list").slideUp();
@@ -156,7 +163,7 @@ function while_handling()
 	doc.input.attr("readonly", true);
     $("div#helpers").slideUp();
     set_icon(chrome.extension.getURL("img/loading.gif"));
-    doc.button.text("Cancel");
+    doc.button.text(chrome.i18n.getMessage("popup_cancel"));
     button_handler = get_url;
 }
 
@@ -177,7 +184,7 @@ function done(data)
     $("div#another_url").fadeIn();
 	doc.input.attr("readonly", true).val(data.msg);
     set_icon(cur_service.site + "/favicon.ico");
-    doc.button.text("Copy to clipboard");
+    doc.button.text(chrome.i18n.getMessage("popup_copy"));
     button_handler = copy;
     if (data.status)
     {
