@@ -146,7 +146,7 @@ function fix_services()
         
         if (!("enabled" in service))
         {
-            set_service(key, "enabled", service.categories.indexOf("recommended") >= 0);
+            set_service(key, "enabled", true);//service.categories.indexOf("recommended") >= 0);
         }
         
         // add empty account definitions if missing

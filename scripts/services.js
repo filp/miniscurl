@@ -22,6 +22,24 @@ services =
         url: "http://tinyurl.com/api-create.php",
         data: "url=%URL%",
     },
+    tinyarrows:
+    {
+        name: "TinyArrows",
+        site: "http://tinyarro.ws",
+        categories: ["shortening"],
+        
+        url: "http://tinyarro.ws/api-create.php",
+        data: "utfpure=1&url=%URL%",
+    },
+    niggr:
+    {
+        name: "Nig.gr",
+        site: "http://nig.gr",
+        categories: ["shortening"],
+        
+        url: "http://nig.gr/api/",
+        data: "%URL%",
+    },
     googl:
     {
         name: "Goo.gl",
