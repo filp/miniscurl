@@ -28,7 +28,7 @@ $(function()
     // initialize labels etc from i18n
     $("div#listhelper").text(chrome.i18n.getMessage("popup_pick"));
     $("span#cur_tab a").text(chrome.i18n.getMessage("popup_cur_tab"));
-    $("span#from_clip a").text(chrome.i18n.getMessage("popup_from_clip"));
+    //$("span#from_clip a").text(chrome.i18n.getMessage("popup_from_clip"));
     $("div#another_url a").text(chrome.i18n.getMessage("popup_another_url"));
     $("div#another_service a").text(chrome.i18n.getMessage("popup_another_service"));
     
@@ -67,6 +67,11 @@ $(function()
     
     // the button
     doc.button.click(button_click);
+    
+    $("div#sharers img").click(function()
+    {
+        chrome.tabs.create({ url: sharers[$(this).attr("name")].url.replace("%MSG%", $(this).data("url")) });
+    });
     
     // "Try another x"
     $("#another_service").click(pick_service);
@@ -126,14 +131,13 @@ function get_url()
     ongoing_request = false;
     
     doc.input.css("background-color", "#FFF");
-    $("div#sharers").hide();
     if (!$("div#main:visible").size() > 0)
     {
-        $("div#another_url").hide();
+        $("div#another_url, div#sharers").hide();
     }
     else
     {
-        $("div#another_url").fadeOut();
+        $("div#another_url, div#sharers").fadeOut();
     }
         
     doc.input.val("http://").attr("readonly", false);;
@@ -188,11 +192,8 @@ function done(data)
     button_handler = copy;
     if (data.status)
     {
-        $("div#sharers img").click(function()
-        {
-            chrome.tabs.create({ url: sharers[$(this).attr("name")].url.replace("%MSG%", data.msg) });
-        });
-        doc.sharers.slideDown();
+        $("div#sharers img").data("url", data.msg);
+        doc.sharers.fadeIn();
         doc.input.css("background-color", "#DCFFDC");
     }
     else
