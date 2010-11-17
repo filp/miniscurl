@@ -1,3 +1,8 @@
+html.options
+{
+    min-height: 100%;
+}
+
 body
 {
     font-family: Calibri, Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -29,7 +34,6 @@ body.options
 	width: 55%;
 	margin: 100px auto;
 	min-width: 550px;
-    min-height: 100%;
 }
 
 fieldset
