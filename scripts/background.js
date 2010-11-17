@@ -72,32 +72,49 @@ function handle_url(url, service_id, callback)
     }
     
     // do the request
-    $.ajax({
-        type: service.method,
-        url: service.url,
-        data: data,
-        dataType: service.datatype,
-        success: function(data, status, xhr)
+    if ("custom" in service)
+    {
+        service.custom(url, service.username, service.password, service.apikey, function(response)
         {
             try
             {
-                result = service.done(data, xhr.responseText, url, xhr);
+                callback(response);
             }
             catch (err)
             {
                 result = { status: false, msg: chrome.i18n.getMessage("internal_error") };
             }
-            callback(result);
-        },
-        error: function(xhr, error)
-        {
-            if (error == null)
+        });
+    }
+    else
+    {
+        $.ajax({
+            type: service.method,
+            url: service.url,
+            data: data,
+            dataType: service.datatype,
+            success: function(data, status, xhr)
             {
-                error = "error";
-            }
-            callback({ status: false, msg: chrome.i18n.getMessage("ajax_" + error) });
-        },
-    });
+                try
+                {
+                    result = service.done(data, xhr.responseText, url, xhr);
+                }
+                catch (err)
+                {
+                    result = { status: false, msg: chrome.i18n.getMessage("internal_error") };
+                }
+                callback(result);
+            },
+            error: function(xhr, error)
+            {
+                if (error == null)
+                {
+                    error = "error";
+                }
+                callback({ status: false, msg: chrome.i18n.getMessage("ajax_" + error) });
+            },
+        });
+    }
 }
 
 function done_shorten_prompt(result)

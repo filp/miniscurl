@@ -37,8 +37,13 @@ services =
         site: "http://nig.gr",
         categories: ["shortening"],
         
-        url: "http://nig.gr/api/",
-        data: "%URL%",
+        custom: function(url, user, pass, api, callback)
+        {
+            $.get("http://nig.gr/api/"+url, {}, function(data, textStatus, xhr)
+            {
+                callback({ status: data.substring(0,4) == "http", msg: data });
+            });
+        },
     },
     googl:
     {
