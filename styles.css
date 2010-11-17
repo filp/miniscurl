@@ -1,16 +1,6 @@
-html
-{
-    min-height: 100%;
-}
-
 body
 {
-    min-width: 300px;
-    min-height: 175px;
-    padding: 10px;
-    overflow: auto;
-    
-	font-family: Calibri, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-family: Calibri, Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	color: #EAF7E6;
     
@@ -19,7 +9,17 @@ body
 
 body.popup
 {
+    padding: 10px;
+    overflow: auto;
+	min-width: 300px;
+    min-height: 175px;
 	overflow-x: hidden;
+}
+
+div.popup
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body.options
@@ -29,6 +29,7 @@ body.options
 	width: 55%;
 	margin: 100px auto;
 	min-width: 550px;
+    min-height: 100%;
 }
 
 fieldset
