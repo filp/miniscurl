@@ -192,7 +192,7 @@ function done(data)
     button_handler = copy;
     if (data.status)
     {
-        $("div#sharers img").data("url", data.msg);
+        $("div#sharers img").data("url", encodeURIComponent(data.msg));
         doc.sharers.fadeIn();
         doc.input.css("background-color", "#DCFFDC");
     }
