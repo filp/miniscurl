@@ -172,7 +172,7 @@ $.each(services, function(id, service)
     services[id] = $.extend({}, default_service, service);
 });
     
-    return services;
+    return sort_keys(services);
 }
 
 function get_sharers()
