@@ -18,6 +18,16 @@ $(function()
 function tab_handler()
 {
     self = $(this);
+    if (self.attr("name") == "custom")
+    {
+        $("div#button").css("width", "255px");
+        $("button#delete").show();
+    }
+    else
+    {
+        $("div#button").css("width", "125px");
+        $("button#delete").hide();
+    }
     $("h2.selected").removeClass("selected");
     self.addClass("selected");
     $("div.pane").hide();

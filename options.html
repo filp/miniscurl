@@ -61,7 +61,7 @@
                         <input id="clipboard" type="checkbox">
                     </div>
                     <label class="checkbox" for="clipboard">Auto-copy
-                        <span class="small" id="last">Automatically copies the shortened/expanded URL to the clipboard</span>
+                        <span class="small last" id="last">Automatically copies the shortened/expanded URL to the clipboard</span>
                     </label>
                 </div>
 
@@ -90,10 +90,24 @@
                 </div>
 
                 <div name="custom" class="pane">
-                    TODO
+                    <label for="id">Service ID
+                        <span class="small">A unique ID for the service to create</span>
+                    </label>
+                    <input id="service-id" type="text" spellcheck="false">
+                    <button id="new-service">New</button>
+                    <hr>
+                    <label for="customservice">Edit
+                        <span class="small"><a href="https://github.com/harpyon/miniscurl/wiki/Adding-custom-services">More info</a></span>
+                    </label>
+                    <select id="customservice">
+                        <option>lol</option>
+                        <option>lolwat</option>
+                        <option>lolwtfbbq</option>
+                    </select>
+                    <textarea wrap="off"></textarea>
                 </div>
                 <div id="button">
-                    <button id="save">Save</button>
+                    <button id="save">Save</button><button id="delete">Delete</button>
                 </div>
             </div>
         </fieldset>
