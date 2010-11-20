@@ -13,6 +13,9 @@ default_settings =
 {
     shortener: "tinyarrows",
     expander: "expandurl",
+    clipboard: false,
+    use_default: true,
+    quick_mode: false,
 };
 var services;
 
