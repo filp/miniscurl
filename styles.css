@@ -191,7 +191,7 @@ button#new-service
     width: 50px;
     height: 31px;
     position: relative;
-    top: -27px;
+    top: -32px;
 }
 
 hr
@@ -383,12 +383,6 @@ div.checkbox
 	float: left;
 	clear: left;
     width: 220px;
-}
-
-select#customservice, input#service-id
-{
-    position: relative;
-    top: 5px;
 }
 
 ul#services

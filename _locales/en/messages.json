@@ -186,5 +186,131 @@
     "popup_from_clip":
     {
         "message": "From clipboard"
+    },
+    
+    
+    
+    "options_title":
+    {
+        "message": "$NAME$ Options",
+        "placeholders":
+        {
+            "name":
+            {
+                "content": "Miniscurl"
+            }
+        }
+    },
+    "options_tab_general":
+    {
+        "message": "General"
+    },
+    "options_tab_popup":
+    {
+        "message": "Popup options"
+    },
+    "options_tab_credentials":
+    {
+        "message": "Credentials"
+    },
+    "options_tab_custom":
+    {
+        "message": "Custom services"
+    },
+    "options_button_save":
+    {
+        "message": "Save"
+    },
+    "options_button_new":
+    {
+        "message": "New"
+    },
+    "options_button_delete":
+    {
+        "message": "Delete"
+    },
+    "options_label_shortener":
+    {
+        "message": "Default shortener"
+    },
+    "options_label_expander":
+    {
+        "message": "Default expander"
+    },
+    "options_label_enabled":
+    {
+        "message": "Enabled services"
+    },
+    "options_label_use_default":
+    {
+        "message": "Use default service"
+    },
+    "options_label_use_default_small":
+    {
+        "message": "Automatically uses the default shortening service instead of prompting you"
+    },
+    "options_label_quick_mode":
+    {
+        "message": "Quick mode"
+    },
+    "options_label_quick_mode_small":
+    {
+        "message": "Automatically uses current tab URL for shortening services"
+    },
+    "options_label_auto_copy":
+    {
+        "message": "Auto-copy"
+    },
+    "options_label_auto_copy_small":
+    {
+        "message": "Automatically copies the shortened/expanded URL to the clipboard"
+    },
+    "options_label_service":
+    {
+        "message": "Service"
+    },
+    "options_label_username":
+    {
+        "message": "Username"
+    },
+    "options_label_password":
+    {
+        "message": "Password"
+    },
+    "options_label_api_key":
+    {
+        "message": "API Key"
+    },
+    "options_label_service_id":
+    {
+        "message": "Service ID"
+    },
+    "options_label_service_id_small":
+    {
+        "message": "A unique ID for the service to create"
+    },
+    "options_label_edit":
+    {
+        "message": "Edit"
+    },
+    "options_custom_help":
+    {
+        "message": "Click here for documentation on adding custom services to Miniscurl"
+    },
+    "options_required":
+    {
+        "message": "Required"
+    },
+    "options_optional":
+    {
+        "message": "Optional"
+    },
+    "options_category_all":
+    {
+        "message": "All"
+    },
+    "options_category_recommended":
+    {
+        "message": "Recommended"
     }
 }
