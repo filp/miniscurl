@@ -144,31 +144,60 @@ function to_clipboard(data)
 // initialize settings
 function init_settings()
 {
-    storage_set("config", default_settings);
-    service_settings = {};
-    $.each(services, function(id, service)
+    if (!storage_get("3.0_initialized"))
     {
-        service_settings[id] = {};
-    });
-    storage_set("services", service_settings);
-    storage_set("custom_services", []);
+        storage_set("config", default_settings);
+        service_settings = {};
+        $.each(services, function(id, service)
+        {
+            service_settings[id] = {};
+        });
+        storage_set("services", service_settings);
+        storage_set("custom_services", []);
+        
+        // load from previous versions
+        if ("autoclipboard" in localStorage)
+        {
+            config_set("clipboard", JSON.parse(localStorage["autoclipboard"]));
+        }
+        if ("quickmode" in localStorage)
+        {
+            config_set("quick_mode", JSON.parse(localStorage["quickmode"]));
+        }
+        if ("usefav" in localStorage)
+        {
+            config_set("use_default", JSON.parse(localStorage["usefav"]));
+        }
+        
+        fix_services(true);
+    }
+    else
+    {
+        fix_services();
+    }
     services = get_services();
-    fix_services();
-    // TODO: import from 2.x
 }
 
 // adds missing user/pass/apikey attributes etc
-function fix_services()
+function fix_services(first)
 {
     $.each(services, function(key, value)
     {
         service = get_service(key);
-        
-        if (!("enabled" in service))
+        if (first)
         {
-            set_service(key, "enabled", true);//service.categories.indexOf("recommended") >= 0);
+            if (!("enabled" in service))
+            {
+                if (key in localStorage)
+                {
+                    set_service(key, "enabled", JSON.parse(localStorage[key]).enabled);
+                }
+                else
+                {
+                    set_service(key, "enabled", service.categories.indexOf("recommended") >= 0);
+                }
+            }
         }
-        
         // add empty account definitions if missing
         if (service.account[0] > 0 && !("username" in service))
         {
