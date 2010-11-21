@@ -140,9 +140,8 @@ function get_url()
         $("div#another_url, div#sharers").fadeOut();
     }
         
-    doc.input.val("http://").attr("readonly", false);;
-    
-    set_icon(cur_service.site + "/favicon.ico");
+    doc.input.val("http://").attr("readonly", false);
+    set_icon("chrome://favicon/" + cur_service.site);
     
     if (cur_service.categories.indexOf("expanding") >= 0)
     {
@@ -187,7 +186,7 @@ function done(data)
     if (!ongoing_request) { return; }
     $("div#another_url").fadeIn();
 	doc.input.attr("readonly", true).val(data.msg);
-    set_icon(cur_service.site + "/favicon.ico");
+    set_icon("chrome://favicon/" + cur_service.site);
     doc.button.text(chrome.i18n.getMessage("popup_copy"));
     button_handler = copy;
     if (data.status)
