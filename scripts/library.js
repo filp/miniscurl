@@ -1,5 +1,5 @@
 /*
- * storage.js
+ * library.js
  * Helper methods for Miniscurl
  *
  * Copyright (C) 2010 Håvard Pettersson.
@@ -7,6 +7,8 @@
  * This software is distributed under the GPL Version 2 license.
  * See the attached LICENSE for more information.
  */
+
+services = get_services();
 
 // miniscurl version
 VERSION = "3.0";

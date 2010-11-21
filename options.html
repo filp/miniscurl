@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="options">
+	<head>
+        <title></title>
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type="text/javascript" src="scripts/jquery-1.4.3.min.js"></script>
+		<script type="text/javascript" src="scripts/services.js"></script>
+		<script type="text/javascript" src="scripts/library.js"></script>
+		<script type="text/javascript" src="scripts/options.js"></script>
+	</head>
+	<body class="options">
+		<fieldset>
+            <div id="header">
+                <img src="img/icon128.png" id="icon">
+                <h1></h1>
+            </div>
+            <div id="options">
+                <h2 name="general" class="tab"></h2>
+                <h2 name="popup" class="tab"></h2>
+                <h2 name="credentials" class="tab"></h2>
+                <h2 name="custom" class="tab"></h2>
+                
+                <div name="general" class="pane">
+                    <label for="shortener" name="options_label_shortener"></label>
+                    <select id="shortener">
+                        <optgroup class="recommended" name="options_category_recommended"></optgroup>
+                        <optgroup class="all" name="options_category_all"></optgroup>
+                    </select>
+                    
+                    <label for="expander" name="options_label_expander"></label>
+                    <select id="expander"></select>
+                    
+                    <label name="options_label_enabled"></label>
+                    <ul id="services"></ul>
+                </div>
+
+                <div name="popup" class="pane">
+                    <div class="checkbox">
+                        <input id="use_default" type="checkbox">
+                    </div>
+                    <label class="checkbox" for="use_default" name="options_label_use_default"></label>
+                    
+                    <div class="checkbox">
+                        <input id="quick_mode" type="checkbox">
+                    </div>
+                    <label class="checkbox" for="quick_mode" name="options_label_quick_mode"></label>
+                    
+                    <div class="checkbox">
+                        <input id="clipboard" type="checkbox">
+                    </div>
+                    <label class="checkbox" for="clipboard" name="options_label_auto_copy"></label>
+                </div>
+
+                <div name="credentials" class="pane">
+                    <label for="credential_service" name="options_label_service"></label>
+                    <select id="credential_service"></select>
+                    
+                    <label for="user" class="credentials" name="options_label_username"></label>
+                    <input class="options" type="text" id="user" spellcheck="false">
+                    
+                    <label for="pass" class="credentials" name="options_label_password"></label>
+                    <input class="options" type="password" id="pass" spellcheck="false">
+                    
+                    <label for="api" class="credentials" name="options_label_api_key"></label>
+                    <input class="options" type="text" id="api" spellcheck="false">
+                </div>
+
+                <div name="custom" class="pane">
+                    <label for="id" name="options_label_service_id"></label>
+                    <input id="service-id" type="text" spellcheck="false">
+                    <button id="new-service" name="options_button_new"></button>
+                    <hr>
+                    <label for="customservice" name="options_label_edit"></label>
+                    <select id="customservice"></select>
+                    <textarea wrap="off"></textarea>
+                </div>
+                <div id="button">
+                    <button id="save" name="options_button_save"></button><button id="delete" name="options_button_delete"></button>
+                </div>
+            </div>
+        </fieldset>
+	</body>
+</html>

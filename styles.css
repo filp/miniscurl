@@ -1,0 +1,432 @@
+html.options
+{
+    min-height: 100%;
+}
+
+body
+{
+    font-family: Calibri, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #EAF7E6;
+    
+	background: -webkit-gradient(linear, left top, 0 150, from(#0093BD), to(#00C0FF));
+}
+
+body.popup
+{
+    padding: 10px;
+    overflow: auto;
+	min-width: 300px;
+    min-height: 175px;
+	overflow-x: hidden;
+}
+
+div.popup
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body.options
+{
+    overflow-y: scroll;
+	color: #4B4B4B;
+	width: 55%;
+	margin: 100px auto;
+	min-width: 550px;
+}
+
+fieldset
+{
+	background-color: #FFF;
+	border: none;
+	min-width: 100%;
+    padding: 0 0 30px 0;
+	
+	-webkit-box-shadow: 0 0 30px #0085B2;
+}
+
+img#icon
+{
+    float: left;
+}
+
+h1
+{
+    font-family: Lobster, serif;
+    font-size: 42px;
+    display: inline;
+    margin-left: 20px;
+    position: relative;
+    top: 40px;
+}
+
+h2.tab
+{
+    font-size: 21px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #EAF7E6;
+    background-color: #A0A0A0;
+    padding: 3px 7px;
+    margin: 2px 0;
+}
+
+h2.tab:hover
+{
+	cursor: pointer;
+    background-color: #4B4B4B;
+}
+
+h2.selected
+{
+    background-color: #4B4B4B;
+}
+
+h2.selected:hover
+{
+    cursor: default !important;
+}
+
+div
+{
+    margin: 0;
+    padding: 0;
+}
+
+div#list
+{
+    display: none;
+}
+
+div#header
+{
+    min-height: 128px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+div#options
+{
+	width: 500px;
+	margin: 0 auto;
+}
+
+div.pane
+{
+    display: none;
+    margin: 20px 0 30px 0;
+}
+
+ul.popup
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+ul.popup > li
+{
+    padding: 5px;
+}
+
+ul.popup > li:hover
+{
+    cursor: pointer;
+    background: #4B4B4B;
+	font-weight: bold;
+}
+
+div#main
+{
+    display: none;
+}
+
+a
+{
+	color: #EAF7E6;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+input.popup
+{
+    width: 290px;
+    height: 25px;
+	padding: 5px;
+    padding-bottom: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+    margin-bottom: 5px;
+    
+	background-repeat: no-repeat;
+	background-position: 6px center;
+	background-size: 16px;
+}
+
+input#service-id
+{
+    width: 160px;
+    height: 16px;
+	padding: 3px;
+    padding-bottom: 10px;
+    border: 1px solid #A0A0A0;
+	font-size: 16px;
+	border-radius: 5px;
+    display: inline-block;
+    margin: 7px 0 20px 10px;
+}
+
+button#new-service
+{
+    display: inline-block;
+    width: 50px;
+    height: 31px;
+    position: relative;
+    top: -32px;
+}
+
+hr
+{
+	color: #A0A0A0;
+	background-color: #A0A0A0;
+	height: 1px;
+	border: none;
+}
+
+div#helpers
+{
+    height: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #FFFFFF;
+    position: relative;
+    top: -10px;
+    margin: 0;
+}
+
+div#listhelper
+{
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+div#button
+{
+    width: 125px;
+    margin: 0 auto;
+}
+
+span.inputhelper
+{
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+span.inputhelper > a
+{
+    color: #4B4B4B;
+    text-decoration: none;
+}
+
+span.inputhelper > a:hover
+{
+    color: #000;
+}
+
+span#cur_tab
+{
+    float: left;
+}
+
+span#from_clip
+{
+    float: right;
+}
+
+button
+{
+	color: #EAF7E6;
+	background-color: #4B4B4B;
+    
+	border-radius: 4px;
+	border: none;
+	clear: both;
+    display: block;
+	width: 125px;
+	height: 31px;
+	font-weight: bold;
+}
+
+button:hover
+{
+	cursor: pointer;
+    background-color: #A0A0A0;
+}
+
+button.popup
+{
+    
+    width: 300px;
+    margin: 5px 0;
+	
+    background-repeat: no-repeat;
+	background-position: 5px center;
+	background-size: 16px;
+}
+
+button#save, button#delete
+{
+    display: inline;
+}
+
+button#delete
+{
+    margin-left: 5px;
+}
+
+div#sharers
+{
+    display: none;
+    margin: 10px 0;
+    text-align: center;
+}
+
+span.sharer
+{
+    cursor: pointer;
+    margin: 2px;
+}
+
+div#anothers
+{
+    width: 300px;
+    position: absolute;
+    bottom: 16px;
+    text-align: center;
+}
+
+label
+{
+    text-align: right;
+    font-size: 18px;
+    display: block;
+    float: left;
+    width: 220px;
+    margin: 10px 10px 0 0;
+}
+
+span.small
+{
+    font-size: 14px;
+    color: #A0A0A0;
+    display: block;
+}
+
+span.small a
+{
+    color: #A0A0A0;
+}
+
+span.last
+{
+    margin-bottom: 20px;
+}
+
+label.credentials
+{
+    position: relative;
+    top: -6px;
+}
+
+label.checkbox
+{
+    text-align: left;
+    margin: 10px 0 0 10px;
+}
+
+input.options, select
+{
+    float: left;
+	width: 220px;
+	height: 30px;
+	margin: 7px 0 20px 10px;
+	font-size: 14px;
+	border: 1px solid #A0A0A0;
+	border-radius: 3px;
+}
+
+input.options
+{
+    width: 215px;
+}
+
+input[type=checkbox]
+{
+    width: 20px;
+    height: 20px;
+	margin: 20px 5px 20px 0;
+}
+
+div.checkbox
+{
+	text-align: right;
+	float: left;
+	clear: left;
+    width: 220px;
+}
+
+ul#services
+{
+    border: 1px solid #A0A0A0;
+    border-radius: 3px;
+    list-style: none;
+    height: 200px;
+    overflow-y: scroll;
+	overflow-x: hidden;
+    width: 218px;
+    padding: 2px 0 0 0;
+    position: relative;
+    left: 10px;
+    top: 7px;
+}
+
+ul#services input
+{
+    width: auto;
+    height: auto;
+    margin: 2px 3px;
+}
+
+ul#services label
+{
+    margin: 0;
+    font-size: 13px;
+    text-align: left;
+    display: block;
+}
+
+ul#services label:hover
+{
+    background: #A0A0A0;
+    color: #FFF;
+}
+
+textarea
+{
+    font-family: monospace;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #A0A0A0;
+	font-size: 12px;
+	border-radius: 5px;
+}

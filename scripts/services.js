@@ -8,6 +8,9 @@
  * See the attached LICENSE for more information.
  */
 
+function get_services()
+{
+
 services = 
 {
     tinyurl:
@@ -18,6 +21,29 @@ services =
         
         url: "http://tinyurl.com/api-create.php",
         data: "url=%URL%",
+    },
+    tinyarrows:
+    {
+        name: "TinyArrows",
+        site: "http://tinyarro.ws",
+        categories: ["shortening"],
+        
+        url: "http://tinyarro.ws/api-create.php",
+        data: "utfpure=1&url=%URL%",
+    },
+    niggr:
+    {
+        name: "Nig.gr",
+        site: "http://nig.gr",
+        categories: ["shortening"],
+        
+        custom: function(url, user, pass, api, callback)
+        {
+            $.get("http://nig.gr/api/"+url, {}, function(data, textStatus, xhr)
+            {
+                callback({ status: data.substring(0,4) == "http", msg: data });
+            });
+        },
     },
     googl:
     {
@@ -97,13 +123,32 @@ services =
             }
             else
             {
-                return { status: false, msg: data.status };
+                return { status: false, msg: chrome.i18n.getMessage("expandurl_error_" + data.status) };
             }
         },
     }
 };
 
-default_service = {
+// load custom
+custom_services = storage_get("custom_services");
+if (custom_services)
+{
+    $.each(custom_services, function(id, data)
+    {
+        if (data.id in services)
+        {
+            alert(chrome.i18n.getMessage("id_taken", [data.id, service.name]));
+        }
+        else
+        {
+            eval("service = " + data.code);
+            services[data.id] = service;
+        }
+    });
+}
+
+default_service =
+{
     name: "",
     site: "",
     register: null,
@@ -126,3 +171,28 @@ $.each(services, function(id, service)
 {
     services[id] = $.extend({}, default_service, service);
 });
+    
+    return sort_keys(services);
+}
+
+function get_sharers()
+{
+
+    return {
+        twitter:
+        {
+            icon: "img/twitter.png",
+            url: "http://twitter.com/?status=%MSG%",
+        },
+        facebook:
+        {
+            icon: "img/facebook.png",
+            url: "http://www.facebook.com/sharer.php?u=%MSG%"
+        },
+        reddit:
+        {
+            icon: "img/reddit.png",
+            url: "http://reddit.com/submit?url=%MSG%"
+        },
+    }
+}

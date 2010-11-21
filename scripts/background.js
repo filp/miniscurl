@@ -8,13 +8,16 @@
  * See the attached LICENSE for more information.
  */
 
-// constants
+// constants/globals
 default_settings =
 {
-    shortener: "tinyurl",
+    shortener: "tinyarrows",
     expander: "expandurl",
+    clipboard: false,
+    use_default: true,
+    quick_mode: false,
 };
-input = $("input");
+var services;
 
 // initialize
 $(function()
@@ -26,26 +29,22 @@ $(function()
 // handle messages
 chrome.extension.onRequest.addListener(function(request, sender, respond)
 {
-    if (request.request == "shorten" || request.request == "expand")
+    if (request.service)
     {
-        if ("service" in request)
-        {
-            service = request.service;
-        }
-        else if (request.request == "expand")
-        {
-            service = get_config("expander");
-        }
-        else
-        {
-            service = get_config("shortener");
-        }
-        handle_url(request.url, service, respond);
+        handle_url(request.url, request.service, respond);
+    }
+    else if (request.request == "shorten")
+    {
+        handle_url(request.url, get_config("shortener"), respond);
+    }
+    else if (request.request == "expand")
+    {
+        service = get_config("expander");
+        handle_url(request.url, get_config("expander"), respond);
     }
     else if (request.request == "copy")
     {
-        input.attr("value", request.data).select();
-        document.execCommand("Copy");
+        to_clipboard(request.data);
     }
 });
 
@@ -76,60 +75,129 @@ function handle_url(url, service_id, callback)
     }
     
     // do the request
-    $.ajax({
-        type: service.method,
-        url: service.url,
-        data: data,
-        dataType: service.datatype,
-        success: function(data, status, xhr)
+    if ("custom" in service)
+    {
+        service.custom(url, service.username, service.password, service.apikey, function(response)
         {
             try
             {
-                result = service.done(data, xhr.responseText, url, xhr);
+                callback(response);
             }
             catch (err)
             {
                 result = { status: false, msg: chrome.i18n.getMessage("internal_error") };
             }
-            callback(result);
-        },
-        error: function(xhr, error)
-        {
-            if (error == null)
+        });
+    }
+    else
+    {
+        $.ajax({
+            type: service.method,
+            url: service.url,
+            data: data,
+            dataType: service.datatype,
+            success: function(data, status, xhr)
             {
-                error = "error";
-            }
-            callback({ status: false, msg: chrome.i18n.getMessage("ajax_" + error) });
-        },
-    });
+                try
+                {
+                    result = service.done(data, xhr.responseText, url, xhr);
+                }
+                catch (err)
+                {
+                    result = { status: false, msg: chrome.i18n.getMessage("internal_error") };
+                }
+                callback(result);
+            },
+            error: function(xhr, error)
+            {
+                if (error == null)
+                {
+                    error = "error";
+                }
+                callback({ status: false, msg: chrome.i18n.getMessage("ajax_" + error) });
+            },
+        });
+    }
+}
+
+function done_shorten_prompt(result)
+{
+    if (prompt(chrome.i18n.getMessage(result.status ? "successful_shorten_prompt" : "failed_shorten_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg) != null && result.status)
+    {
+        to_clipboard(result.msg);
+    }
+}
+function done_expand_prompt(result)
+{
+    if (prompt(chrome.i18n.getMessage(result.status ? "successful_expand_prompt" : "failed_expand_prompt", service.name) + "\n\n" + chrome.i18n.getMessage("original_url") + "\n" + url, result.msg) != null && result.status)
+    {
+        chrome.tabs.create({ url: result.msg });
+    }
+}
+
+function to_clipboard(data)
+{
+    $("input").attr("value", data).select();
+    document.execCommand("Copy");
 }
 
 // initialize settings
 function init_settings()
 {
-    storage_set("config", default_settings);
-    service_settings = {};
-    $.each(services, function(id, service)
+    if (!storage_get("3.0_initialized"))
     {
-        service_settings[id] = {};
-    });
-    storage_set("services", service_settings);
-    fix_services();
-    // TODO: import from 2.x
+        storage_set("config", default_settings);
+        service_settings = {};
+        $.each(services, function(id, service)
+        {
+            service_settings[id] = {};
+        });
+        storage_set("services", service_settings);
+        storage_set("custom_services", []);
+        
+        // load from previous versions
+        if ("autoclipboard" in localStorage)
+        {
+            config_set("clipboard", JSON.parse(localStorage["autoclipboard"]));
+        }
+        if ("quickmode" in localStorage)
+        {
+            config_set("quick_mode", JSON.parse(localStorage["quickmode"]));
+        }
+        if ("usefav" in localStorage)
+        {
+            config_set("use_default", JSON.parse(localStorage["usefav"]));
+        }
+        
+        fix_services(true);
+    }
+    else
+    {
+        fix_services();
+    }
+    services = get_services();
 }
 
 // adds missing user/pass/apikey attributes etc
-function fix_services()
+function fix_services(first)
 {
     $.each(services, function(key, value)
     {
         service = get_service(key);
-        
-        if (!("enabled" in service))
+        if (first)
         {
-            set_service(key, "enabled", service.categories.indexOf("recommended") >= 0);
+            if (!("enabled" in service))
+            {
+                if (key in localStorage)
+                {
+                    set_service(key, "enabled", JSON.parse(localStorage[key]).enabled);
+                }
+                else
+                {
+                    set_service(key, "enabled", service.categories.indexOf("recommended") >= 0);
+                }
+            }
         }
-        
         // add empty account definitions if missing
         if (service.account[0] > 0 && !("username" in service))
         {
