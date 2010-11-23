@@ -95,6 +95,20 @@ function tab_handler()
     $("h2.selected").removeClass("selected");
     self.addClass("selected");
     $("div.pane").hide();
+    switch (self.attr("name"))
+    {
+        case "general":
+            load_general_tab();
+            break;
+        case "popup":
+            load_popup_tab();
+            break;
+        case "credentials":
+            load_credentials_tab();
+            break;
+        case "custom":
+            break;
+    }
     $("div[name=" + self.attr("name") + "]").show();
 }
 
