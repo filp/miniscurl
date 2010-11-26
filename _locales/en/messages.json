@@ -171,6 +171,10 @@
     {
         "message": "Copy to clipboard"
     },
+    "popup_copied":
+    {
+        "message": "Copied!"
+    },
     "popup_another_url":
     {
         "message": "Try another URL"
@@ -220,6 +224,10 @@
     "options_button_save":
     {
         "message": "Save"
+    },
+    "options_button_saved":
+    {
+        "message": "Saved!"
     },
     "options_button_new":
     {

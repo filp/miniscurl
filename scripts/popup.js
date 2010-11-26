@@ -73,7 +73,6 @@ $(function()
         chrome.tabs.create({ url: sharers[$(this).attr("name")].url.replace("%MSG%", $(this).data("url")) });
     });
     
-    // "Try another x"
     $("#another_service").click(pick_service);
     $("#another_url").click(get_url);
     
@@ -92,6 +91,7 @@ $(function()
     // misc stuff
     $("div#another_url").hide();
     
+    // fire it up
     if (get_config("use_default"))
     {
         cur_service_id = get_config(get_config("default_action") + "er");
@@ -132,8 +132,10 @@ function set_icon(src)
 	}
 }
 
+// dummy button handler function
 function button_handler() {}
 
+// hooked up to the button, calls the handler
 function button_click()
 {
     button_handler();
@@ -226,4 +228,5 @@ function done(data)
 function copy()
 {
     chrome.extension.sendRequest({ request: "copy", data: doc.input.val() });
+    doc.button.text(chrome.i18n.getMessage("popup_copied"));
 }

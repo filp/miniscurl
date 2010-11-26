@@ -79,6 +79,8 @@ $(function()
             case "custom":
                 break;
         }
+        $("button#save").text(chrome.i18n.getMessage("options_button_saved"));
+        setTimeout('$("button#save").text(chrome.i18n.getMessage("options_button_save"));', 5000);
     });
 });
 
