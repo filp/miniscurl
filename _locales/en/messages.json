@@ -247,7 +247,16 @@
     },
     "options_label_use_default_small":
     {
-        "message": "Automatically uses the default shortening service instead of prompting you"
+        "message": "Automatically picks the default service for doing the preferred action, instead of having you pick one"
+    },
+    "options_shorten":
+    {
+        "message": "Shorten"
+    },
+    
+    "options_expand":
+    {
+        "message": "Expand"
     },
     "options_label_quick_mode":
     {
