@@ -165,6 +165,7 @@ function load_credentials_tab()
     }
     
     service_list = $("select#credential_service");
+    service_list.empty();
     service_list.click(credentials_update);
     $.each(services, function(id, service)
     {
