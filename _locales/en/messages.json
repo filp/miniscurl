@@ -1,115 +1,52 @@
 {
-    "shorten_this":
-    {
-        "message": "Shorten this",
-        "description": "The context menu option to shorten the right-clicked item."
-    },
-    "shorten_any":
-    {
-        "message": "Shorten any...",
-        "description": "The context menu option to shorten any URL."
-    },
-    "shorten_tab":
-    {
-        "message": "Shorten current tab",
-        "description": "The context menu option to shorten the current tab URL."
-    },
-    "expand_this":
-    {
-        "message": "Expand this",
-        "description": "The context menu option to expand the right-clicked item."
-    },
-    "expand_any":
-    {
-        "message": "Expand any...",
-        "description": "The context menu option to expand any URL."
-    },
     "ajax_error":
     {
-        "message": "Unknown error",
-        "description": "The error shown to the user when an unknown error occurs."
+        "message": "Unknown error"
     },
     "ajax_timeout":
     {
-        "message": "Service timeout",
-        "description": "The error shown to the user when a timeout occurs."
+        "message": "Service timeout"
     },
     "ajax_parsererror":
     {
-        "message": "Error parsing data",
-        "description": "The error shown to the user when a parser error occurs."
+        "message": "Error parsing data"
     },
     "internal_error":
     {
-        "message": "Internal error",
-        "description": "The error shown to the user when an exception occurs."
+        "message": "Internal error"
     },
     "invalid_url":
     {
-        "message": "Invalid URL",
-        "description": "The error shown to the user when the input URL is invalid."
+        "message": "Invalid URL"
     },
-    "successful_shorten_prompt":
+    
+    
+    
+    
+    
+    "menu_shorten_this":
     {
-        "message": "Successfully shortened URL using $SERVICE$. Click OK to copy the URL to the clipboard.",
-        "description": "Shown in a popup to the user when a URL is successfully shortened via the context menu.",
-        "placeholders":
-        {
-            "service":
-            {
-                "content": "$1",
-                "example": "TinyURL"
-            }
-        }
+        "message": "Shorten this"
     },
-    "failed_shorten_prompt":
+    "menu_shorten_any":
     {
-        "message": "An error occured while shortening URL using $SERVICE$.",
-        "description": "Shown in a popup to the user when a URL is unsuccessfully shortened via the context menu.",
-        "placeholders":
-        {
-            "service":
-            {
-                "content": "$1",
-                "example": "TinyURL"
-            }
-        }
+        "message": "Shorten any..."
     },
-    "successful_expand_prompt":
+    "menu_shorten_tab":
     {
-        "message": "Successfully expanded URL using $SERVICE$. Click OK to open the URL in a new tab.",
-        "description": "Shown in a popup to the user when a URL is successfully expanded via the context menu.",
-        "placeholders":
-        {
-            "service":
-            {
-                "content": "$1",
-                "example": "ExpandURL"
-            }
-        }
+        "message": "Shorten current tab"
     },
-    "failed_expand_prompt":
+    "menu_expand_this":
     {
-        "message": "An error occured while expanding URL using $SERVICE$.",
-        "description": "Shown in a popup to the user when a URL is unsuccessfully expanded via the context menu.",
-        "placeholders":
-        {
-            "service":
-            {
-                "content": "$1",
-                "example": "ExpandURL"
-            }
-        }
+        "message": "Expand this"
     },
-    "original_url":
+    "menu_expand_any":
     {
-        "message": "Original URL:",
-        "description": "Shown above the original URL in popups from context menu."
+        "message": "Expand any..."
     },
     "prompt_shorten_url":
     {
         "message": "Insert the URL you wish to shorten using $SERVICE$.",
-        "description": "Shown in a popup where the user inserts the URL to shorten.",
         "placeholders":
         {
             "service":
@@ -119,25 +56,78 @@
             }
         }
     },
-    "expandurl_error_OK":
+    "prompt_expand_url":
     {
-        "message": "URL doesn't redirect anywhere",
-        "description": "Error shown when the user tries to expand something that doesn't redirect anywhere."
+        "message": "Insert the URL you wish to expand using $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
     },
-    "expandurl_error_InvalidURL":
+    "prompt_shorten_successful":
     {
-        "message": "Invalid URL",
-        "description": "Error shown when the user tries to expand something that doesn't exist."
+        "message": "Successfully shortened URL using $SERVICE$. Click OK to copy the URL to the clipboard.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
     },
-    "expandurl_error_InternalError":
+    "prompt_shorten_failed":
     {
-        "message": "Server error",
-        "description": "Error shown when ExpandURL has an internal error."
+        "message": "An error occured while shortening URL using $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
     },
+    "prompt_expand_successful":
+    {
+        "message": "Successfully expanded URL using $SERVICE$. Click OK to open the URL in a new tab.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "prompt_expand_failed":
+    {
+        "message": "An error occured while expanding URL using $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "prompt_original_url":
+    {
+        "message": "Original URL:"
+    },
+    
+    
+    
+    
+    
     "popup_pick":
     {
-        "message": "Pick a service",
-        "description": "Shown above the list of services."
+        "message": "Pick a service"
     },
     "popup_shorten":
     {
@@ -191,6 +181,8 @@
     {
         "message": "From clipboard"
     },
+    
+    
     
     
     
@@ -329,5 +321,22 @@
     "options_category_recommended":
     {
         "message": "Recommended"
+    },
+    
+    
+    
+    
+    
+    "expandurl_OK":
+    {
+        "message": "URL doesn't redirect anywhere"
+    },
+    "expandurl_InvalidURL":
+    {
+        "message": "Invalid URL"
+    },
+    "expandurl_InternalError":
+    {
+        "message": "Server error"
     }
 }

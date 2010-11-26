@@ -17,7 +17,7 @@ function create_menu()
 	});
     
     chrome.contextMenus.create({
-		title: chrome.i18n.getMessage("shorten_tab"),
+		title: chrome.i18n.getMessage("menu_shorten_tab"),
 		parentId: parent,
 		contexts: ["page"],
 		onclick: function(data, tab)
@@ -29,7 +29,7 @@ function create_menu()
 	});
     
     chrome.contextMenus.create({
-		title: chrome.i18n.getMessage("shorten_this"),
+		title: chrome.i18n.getMessage("menu_shorten_this"),
 		parentId: parent,
 		contexts: ["link", "selection", "image", "video", "audio"],
 		onclick: function(data, tab)
@@ -41,7 +41,7 @@ function create_menu()
 	});
     
     chrome.contextMenus.create({
-		title: chrome.i18n.getMessage("expand_this"),
+		title: chrome.i18n.getMessage("menu_expand_this"),
 		parentId: parent,
 		contexts: ["link", "selection"],
 		onclick: function(data, tab)
@@ -59,7 +59,7 @@ function create_menu()
     });
     
     chrome.contextMenus.create({
-		title: chrome.i18n.getMessage("shorten_any"),
+		title: chrome.i18n.getMessage("menu_shorten_any"),
 		parentId: parent,
 		contexts: ["all"],
 		onclick: function(data, tab)
@@ -71,7 +71,7 @@ function create_menu()
 	});
     
     chrome.contextMenus.create({
-		title: chrome.i18n.getMessage("expand_any"),
+		title: chrome.i18n.getMessage("menu_expand_any"),
 		parentId: parent,
 		contexts: ["all"],
 		onclick: function(data, tab)

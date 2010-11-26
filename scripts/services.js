@@ -123,7 +123,7 @@ services =
             }
             else
             {
-                return { status: false, msg: chrome.i18n.getMessage("expandurl_error_" + data.status) };
+                return { status: false, msg: chrome.i18n.getMessage("expandurl_" + data.status) };
             }
         },
     }
