@@ -40,8 +40,8 @@ $(function()
         {
             doc.list.append("<li></li>").children().last().text(service.name).attr("name", id).click(function()
             {
-                cur_service = get_service($(this).attr("name"));
                 cur_service_id = $(this).attr("name");
+                cur_service = get_service(cur_service_id);
                 get_url();
             });
         }
@@ -92,8 +92,29 @@ $(function()
     // misc stuff
     $("div#another_url").hide();
     
-    // wait (nothing) before starting, to allow the popup to pop up first
-    setTimeout(pick_service());
+    if (get_config("use_default"))
+    {
+        cur_service_id = get_config(get_config("default_action") + "er");
+        cur_service = get_service(cur_service_id);
+        if (get_config("quick_mode"))
+        {
+            $("div#another_url, div#sharers, div#helpers").hide();
+            $("div#main").show();
+            chrome.tabs.getSelected(null, function(tab)
+            {
+                doc.input.val(tab.url);
+                handle_url();
+            });
+        }
+        else
+        {
+            get_url();
+        }
+    }
+    else
+    {
+        pick_service();
+    }
 });
 
 // setting the input icon and fixing padding etc
