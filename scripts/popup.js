@@ -222,6 +222,12 @@ function done(data)
     {
         doc.input.css("background-color", "#FFDCDC");
     }
+    
+    // automatically copy
+    if (get_config("clipboard"))
+    {
+        copy();
+    }
 }
 
 // copy input to clipboard
