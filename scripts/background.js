@@ -13,6 +13,7 @@ default_settings =
 {
     shortener: "tinyarrows",
     expander: "expandurl",
+    default_action: "shorten",
     clipboard: false,
     use_default: true,
     quick_mode: false,

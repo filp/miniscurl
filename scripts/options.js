@@ -37,7 +37,10 @@ $(function()
     {
         $(self).append("<span>").children().addClass("small").text(chrome.i18n.getMessage($(self).attr("name") + "_small"));
     });
-    $("div[name=popup] label span, ").last().addClass("last");
+    $("div[name=popup] label span").last().addClass("last");
+    
+    // add radio buttons
+    $("label[name=options_label_use_default]").append('<div><input type="radio" id="default_action_shorten" name="default_action" value="shorten"><label for="default_action_shorten" class="radio">' + chrome.i18n.getMessage("options_shorten") + '</label></div>').append('<div><input type="radio" id="default_action_expand" name="default_action" value="expand"><label for="default_action_expand" class="radio">' + chrome.i18n.getMessage("options_expand") + '</label></div>');
     
     // populate dropdowns, load settings, etc
     load_general_tab();
@@ -64,7 +67,8 @@ $(function()
                 $("div.pane[name=popup] input").each(function(id, input)
                 {
                     set_config(input.id, input.checked);
-                }); 
+                });
+                set_config("default_action", $("input[name=default_action]:checked").val());
                 break;
             case "credentials":
                 cur_service = $("select#credential_service").val();
@@ -143,6 +147,7 @@ function load_popup_tab()
     {
         input.checked = get_config(input.id);
     });
+    $("div.pane[name=popup] input#default_action_" + get_config("default_action")).attr("checked", true);
 }
 
 function load_credentials_tab()

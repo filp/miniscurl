@@ -326,6 +326,21 @@ label
     margin: 10px 10px 0 0;
 }
 
+label.radio
+{
+    text-align: left;
+    font-size: 14px;
+    display: inline;
+    float: none;
+    width: auto;
+    margin: 0;
+}
+
+input[type=radio]
+{
+    margin-top: 10px;
+}
+
 span.small
 {
     font-size: 14px;
