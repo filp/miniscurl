@@ -171,6 +171,8 @@ function init_settings()
         }
         
         fix_services(true);
+        
+        storage_set("3.0_initialized", true)
     }
     else
     {
