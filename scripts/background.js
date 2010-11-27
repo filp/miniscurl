@@ -11,7 +11,7 @@
 // constants/globals
 default_settings =
 {
-    shortener: "tinyarrows",
+    shortener: "googl",
     expander: "expandurl",
     default_action: "shorten",
     clipboard: false,
