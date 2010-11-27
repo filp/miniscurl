@@ -78,6 +78,11 @@ h2.tab:hover
     background-color: #4B4B4B;
 }
 
+h2.tab[name=custom]
+{
+    display: none;
+}
+
 h2.selected
 {
     background-color: #4B4B4B;
