@@ -144,6 +144,16 @@ span.sharer
     margin: 2px;
 }
 
+span.sharer img
+{
+    opacity: 0.75;
+}
+
+span.sharer img:hover
+{
+    opacity: 1;
+}
+
 div#anothers
 {
     width: 300px;
