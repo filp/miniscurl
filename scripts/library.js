@@ -43,6 +43,7 @@ function get_service(idx)
 function set_service(service, idx, val)
 {
     data = storage_get("services");
+    if (!(service in data)) { data[service] = {} }
     data[service][idx] = val;
     storage_set("services", data);
 }
