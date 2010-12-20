@@ -126,7 +126,35 @@ services =
                 return { status: false, msg: chrome.i18n.getMessage("expandurl_" + data.status) };
             }
         },
-    }
+    },
+    dafk:
+    {
+        name: "go.dafk",
+        site: "http://go.dafk.net",
+        categories: ["recommended", "shortening"],
+
+        url: "http://go.dafk.net/new.php",
+        data: "type=json&url=%URL%",
+        datatype: "json",
+        done: function (data, raw, url, xhr)
+        {
+            return { status: !(data.error), msg: data.out };
+        },
+    },
+    isgd:
+    {
+        name: "is.gd",
+        site: "http://is.gd",
+        categories: ["recommended"],
+        
+        url: "http://is.gd/api.php",
+        data: "longurl=%URL%",
+        done: function (data, raw, url, xhr)
+        {
+            return { status: raw.substring(0,5) != "Error", msg: raw };
+        },
+    },
+    
 };
 
 // load custom
