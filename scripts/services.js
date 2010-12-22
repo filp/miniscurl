@@ -26,7 +26,6 @@ services =
     {
         name: "TinyArrows",
         site: "http://tinyarro.ws",
-        categories: ["shortening"],
         
         url: "http://tinyarro.ws/api-create.php",
         data: "utfpure=1&url=%URL%",
@@ -35,7 +34,6 @@ services =
     {
         name: "Nig.gr",
         site: "http://nig.gr",
-        categories: ["shortening"],
         
         custom: function(url, user, pass, api, callback)
         {
@@ -145,7 +143,7 @@ services =
     {
         name: "is.gd",
         site: "http://is.gd",
-        categories: ["recommended"],
+        categories: ["shortening", "recommended"],
         
         url: "http://is.gd/api.php",
         data: "longurl=%URL%",
@@ -154,7 +152,86 @@ services =
             return { status: raw.substring(0,5) != "Error", msg: raw };
         },
     },
-    
+    vgd:
+    {
+        name: "v.gd",
+        site: "http://v.gd",
+        
+        url: "http://v.gd/create.php",
+        data: "format=json&url=%URL%",
+        datatype: "json",
+        done: function (data, raw, url, xhr)
+        {
+            return { status: "shorturl" in data, msg: "shorturl" in data ? data.shorturl : data.errormessage };
+        },
+    },
+    "0mk": {
+        name: "0.mk",
+        site: "http://0.mk",
+        account: [ 1, 0, 1 ],
+        register: "http://0.mk/registracija",
+        
+        url: "http://api.0.mk/v2/skrati",
+        data: function(url, user, pass, api)
+        {
+            ret = { link: url };
+            if (user != "" && api != "")
+            {
+                ret.korisnik = user;
+                ret.apikey = api;
+            }
+            return ret;
+        },
+        datatype: "json",
+        done: function (data, raw, url, xhr)
+        {
+            if (data.status == 1)
+            {
+                return { status: true, msg: data.kratok };
+            }
+            else
+            {
+                return { status: false, msg: data.greskaMsg };
+            }
+            
+        },
+    },
+    "2zeus" : {
+        name: "2ze.us",
+        site: "http://2ze.us",
+        
+        url: "http://2ze.us/generate/",
+        data: "url=%URL%",
+        datatype: "json",
+        done: function (data, raw, url, xhr)
+        {
+            if (data.errors)
+            {
+                return { status: false, msg: data.errors[url] };
+            }
+            return { status: true, msg: data.urls[url].shortcut };
+        },
+    },
+    "4ly" : {
+        name: "4.ly",
+        site: "http://4.ly",
+        
+        url: "http://4.ly/api/short",
+        args: "longurl=%URL%",
+        datatype: "json",
+        callback: function (data, raw, url, xhr)
+        {
+            if (data.error.code == 0)
+            {
+                return { status: true, msg: data.url };
+            }
+            else
+            {
+                return { status: false, msg: data.error.msg };
+            }
+            
+        },
+    },
 };
 
 // load custom
