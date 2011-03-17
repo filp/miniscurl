@@ -16,6 +16,7 @@
         "default_title": "Miniscurl",
         "default_popup": "popup.html"
     },
-    "permissions": ["http://*/*", "contextMenus", "tabs", "chrome://favicon/"],
+    "omnibox_keyword": "mini",
+    "permissions": ["http://*/*", "contextMenus", "tabs", "chrome://favicon/", "experimental"],
     "default_locale": "en"
 }
