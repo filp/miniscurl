@@ -20,7 +20,6 @@ services =
         categories: ["shortening", "recommended"],
         
         url: "http://tinyurl.com/api-create.php",
-        data: "url=%URL%",
     },
     tinyarrows:
     {
@@ -50,7 +49,6 @@ services =
         categories: ["shortening", "recommended"],
         
         url: "http://goo.gl/api/shorten",
-        data: "url=%URL%",
         method: "POST",
         datatype: "json",
         done: function(data, raw, url, xhr)
@@ -110,7 +108,6 @@ services =
         categories: ["expanding", "recommended"],
         
         url: "http://expandurl.appspot.com/expand",
-        data: "url=%URL%",
         method: "POST",
         datatype: "json",
         done: function(data, raw, url, xhr)
@@ -165,7 +162,8 @@ services =
             return { status: "shorturl" in data, msg: "shorturl" in data ? data.shorturl : data.errormessage };
         },
     },
-    "0mk": {
+    "0mk":
+    {
         name: "0.mk",
         site: "http://0.mk",
         account: [ 1, 0, 1 ],
@@ -196,12 +194,12 @@ services =
             
         },
     },
-    "2zeus" : {
+    "2zeus":
+    {
         name: "2ze.us",
         site: "http://2ze.us",
         
         url: "http://2ze.us/generate/",
-        data: "url=%URL%",
         datatype: "json",
         done: function (data, raw, url, xhr)
         {
@@ -212,7 +210,8 @@ services =
             return { status: true, msg: data.urls[url].shortcut };
         },
     },
-    "4ly" : {
+    "4ly":
+    {
         name: "4.ly",
         site: "http://4.ly",
         
@@ -232,6 +231,39 @@ services =
             
         },
     },
+    armin:
+    {
+        name: "arm.in",
+        site: "http://arm.in",
+        register: "http://arm.in/login.php",
+        
+        url: "http://arm.in/arminize/",
+        data: "%URL%",
+        datatype: "xml",
+        done: function (data, raw, url, xhr)
+        {
+            if (data.getElementsByTagName("error")[0])
+            {
+                return { status: false, msg: data.getElementsByTagName("error")[0].childNodes[0].nodeValue };
+            }
+            else
+            {
+                return { status: true, msg: data.getElementsByTagName("arminized_url")[0].childNodes[0].nodeValue };
+            }
+        },
+    },
+    urlie:
+    {
+        name: "URL.ie",
+        site: "http://url.ie",
+        
+        url: "http://url.ie/site/api/tinyurl/create/",
+        done: function (raw, parsed, url, xhr)
+        {
+            return { status: raw.substring(0,4) == "http", msg: raw };
+        },
+    },
+
 };
 
 // load custom
@@ -261,7 +293,7 @@ default_service =
     categories: ["shortening"],
     
     url: "",
-    data: "",
+    data: "url=%URL%",
     method: "GET",
     datatype: "text",
     beforesend: function(xhr){},
@@ -280,6 +312,7 @@ $.each(services, function(id, service)
     return sort_keys(services);
 }
 
+// the tiny icons for sharing the URL on different sites
 function get_sharers()
 {
 
@@ -299,5 +332,10 @@ function get_sharers()
             icon: "img/reddit.png",
             url: "http://reddit.com/submit?url=%MSG%"
         },
+        qr:
+        {
+            icon: "img/qr.png",
+            url: "http://chart.apis.google.com/chart?chs=256x256&cht=qr&chld=|0&chl=%MSG%"
+        }
     }
 }
