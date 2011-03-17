@@ -326,7 +326,26 @@
     
     
     
-    
+    "twitter_title":
+    {
+        "message": "Share on Twitter"
+    },
+    "facebook_title":
+    {
+        "message": "Share on Facebook"
+    },
+    "reddit_title":
+    {
+        "message": "Share on Reddit"
+    },
+    "buzz_title":
+    {
+        "message": "Share on Google Buzz"
+    },
+    "qr_title":
+    {
+        "message": "Get QR Code"
+    },
     "expandurl_OK":
     {
         "message": "URL doesn't redirect anywhere"

@@ -50,7 +50,7 @@ $(function()
     // add sharing stuff
     $.each(sharers, function(id, service)
     {
-        doc.sharers.append("<span>").children().last().addClass("sharer").append("<img>").children().last().attr("src", service.icon).attr("name", id);
+        doc.sharers.append("<span>").children().last().addClass("sharer").append("<img>").children().last().attr("src", service.icon).attr("name", id).attr("title", chrome.i18n.getMessage(id + "_title"));
     });
     
     // hitting enter in the URL input
