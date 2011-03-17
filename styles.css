@@ -84,6 +84,8 @@ ul.popup > li
 ul.popup > li > img
 {
     margin-right: 5px;
+    position: relative;
+    top: 2px;
 }
 
 ul.popup > li:hover
