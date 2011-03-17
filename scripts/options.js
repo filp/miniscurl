@@ -72,9 +72,9 @@ $(function()
                 break;
             case "credentials":
                 cur_service = $("select#credential_service").val();
-                set_service(cur, "username", $("input#user").val());
-                set_service(cur, "password", $("input#pass").val());
-                set_service(cur, "apikey", $("input#api").val());
+                set_service(cur_service, "username", $("input#user").val());
+                set_service(cur_service, "password", $("input#pass").val());
+                set_service(cur_service, "apikey", $("input#api").val());
                 break;
             case "custom":
                 break;
@@ -166,7 +166,7 @@ function load_credentials_tab()
     
     service_list = $("select#credential_service");
     service_list.empty();
-    service_list.click(credentials_update);
+    service_list.change(credentials_update);
     $.each(services, function(id, service)
     {
         if (sum(service.account) > 0)
