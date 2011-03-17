@@ -85,17 +85,17 @@ function create_menu()
 
 function get_url(data)
 {
-    if ("selectionText" in data)
-    {
-        return data.selectionText;
-    }
-    else if ("linkUrl" in data)
+    if ("linkUrl" in data)
     {
         return data.linkUrl;
     }
     else if ("srcUrl" in data)
     {
         return data.srcUrl;
+    }
+    else if ("selectionText" in data)
+    {
+        return data.selectionText;
     }
     else
     {
