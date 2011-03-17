@@ -38,12 +38,12 @@ $(function()
         service = get_service(id);
         if (service.enabled)
         {
-            doc.list.append("<li></li>").children().last().text(service.name).attr("name", id).click(function()
+            doc.list.append("<li></li>").children().last().attr("name", id).click(function()
             {
                 cur_service_id = $(this).attr("name");
                 cur_service = get_service(cur_service_id);
                 get_url();
-            });
+            }).append('<img src="chrome://favicon/' + service.site + '">').append("<span></span>").children().last().text(service.name);
         }
     });
     
@@ -144,8 +144,8 @@ function button_click()
 // shows the list of services, prompting the user to pick one
 function pick_service()
 {
-    $("div#list").slideDown();
-    $("div#main").slideUp();
+    $("div#list").show();//slideDown();
+    $("div#main").hide();//slideUp();
 }
 
 // shows the URL input
@@ -175,8 +175,8 @@ function get_url()
         doc.button.text(chrome.i18n.getMessage("popup_shorten", cur_service.name));
     }
     
-    $("div#list").slideUp();
-    $("div#main").slideDown();
+    $("div#list").hide();//slideUp();
+    $("div#main").show();//slideDown();
     doc.input.select().focus();
     $("div#helpers").slideDown();
     button_handler = handle_url;

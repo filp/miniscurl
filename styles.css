@@ -81,6 +81,11 @@ ul.popup > li
     padding: 5px;
 }
 
+ul.popup > li > img
+{
+    margin-right: 5px;
+}
+
 ul.popup > li:hover
 {
     cursor: pointer;
