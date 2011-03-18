@@ -56,6 +56,10 @@
             }
         }
     },
+    "menu_configuration":
+    {
+        "message": "Configuration"
+    },
     "prompt_expand_url":
     {
         "message": "Insert the URL you wish to expand using $SERVICE$.",
@@ -354,7 +358,8 @@
         {
             "service":
             {
-                "content": "TinyURL"
+                "content": "$1",
+                "example": "TinyURL"
             }
         }
     },
@@ -365,7 +370,8 @@
         {
             "service":
             {
-                "content": "ExpandURL"
+                "content": "$1",
+                "example": "ExpandURL"
             }
         }
     },
@@ -376,7 +382,8 @@
         {
             "command":
             {
-                "content": "<any invalid command>"
+                "content": "$1",
+                "example": "<any invalid command>"
             }
         }
     },

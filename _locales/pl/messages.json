@@ -44,6 +44,10 @@
     {
         "message": "Rozwiń cokolwiek..."
     },
+    "menu_configuration":
+    {
+        "message": "Opcje"
+    },
     "prompt_shorten_url":
     {
         "message": "Wpisz adres, który chcesz skrócić przy użyciu $SERVICE$.",
@@ -354,7 +358,8 @@
         {
             "service":
             {
-                "content": "TinyURL"
+                "content": "$1",
+                "example": "TinyURL"
             }
         }
     },
@@ -365,7 +370,8 @@
         {
             "service":
             {
-                "content": "ExpandURL"
+                "content": "$1",
+                "example": "ExpandURL"
             }
         }
     },
@@ -376,7 +382,8 @@
         {
             "command":
             {
-                "content": "<dowolne nieprawidłowe polecenie>"
+                "content": "$1",
+                "example": "<dowolne nieprawidłowe polecenie>"
             }
         }
     },

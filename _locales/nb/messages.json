@@ -44,6 +44,10 @@
     {
         "message": "Utvid annet..."
     },
+    "menu_configuration":
+    {
+        "message": "Instillinger"
+    },
     "prompt_shorten_url":
     {
         "message": "Skriv in URLen du vil forkorte med $SERVICE$.",
@@ -353,7 +357,8 @@
         {
             "service":
             {
-                "content": "TinyURL"
+                "content": "$1",
+                "example": "TinyURL"
             }
         }
     },
@@ -364,7 +369,8 @@
         {
             "service":
             {
-                "content": "ExpandURL"
+                "content": "$1",
+                "example": "ExpandURL"
             }
         }
     },
@@ -375,7 +381,8 @@
         {
             "command":
             {
-                "content": "<any invalid command>"
+                "content": "$1",
+                "example": "<any invalid command>"
             }
         }
     },

@@ -44,6 +44,10 @@
     {
         "message": "Laajenna..."
     },
+    "menu_configuration":
+    {
+        "message": "Asetukset"
+    },
     "prompt_shorten_url":
     {
         "message": "Anna URL jonka haluat lyhentää käyttämällä $SERVICE$.",
@@ -355,7 +359,8 @@
         {
             "service":
             {
-                "content": "TinyURL"
+                "content": "$1",
+                "example": "TinyURL"
             }
         }
     },
@@ -366,7 +371,8 @@
         {
             "service":
             {
-                "content": "ExpandURL"
+                "content": "$1",
+                "example": "ExpandURL"
             }
         }
     },
@@ -377,7 +383,8 @@
         {
             "command":
             {
-                "content": "<any invalid command>"
+                "content": "$1",
+                "example": "<any invalid command>"
             }
         }
     },

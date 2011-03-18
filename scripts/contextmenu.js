@@ -81,6 +81,22 @@ function create_menu()
             handle_url(url, service, done_expand_prompt);
         }
 	});
+    
+    chrome.contextMenus.create({
+        parentId: parent,
+        type: "separator",
+        contexts: ["all"]
+    });
+    
+    chrome.contextMenus.create({
+        title: chrome.i18n.getMessage("menu_configuration"),
+        parentId: parent,
+        contexts: ["all"],
+        onclick: function(data, tab)
+        {
+            chrome.tabs.create({ url: "chrome-extension://" + chrome.i18n.getMessage("@@extension_id") + "/options.html" });
+        }
+    });
 }
 
 function get_url(data)
