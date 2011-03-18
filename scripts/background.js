@@ -123,7 +123,7 @@ function handle_url(url, service_id, callback)
 
 function done_shorten_prompt(result)
 {
-    if (prompt(chrome.i18n.getMessage(result.status ? "prompt_shorten_successful" : "prompt_shorten_failed", service.name) + "\n\n" + chrome.i18n.getMessage("prompt_original_url") + "\n" + url, result.msg) != null && result.status)
+    if (prompt(chrome.i18n.getMessage(result.status ? "prompt_shorten_successful" : "prompt_shorten_failed", [service.name, url]), result.msg) != null && result.status)
     {
         to_clipboard(result.msg);
     }
@@ -131,7 +131,7 @@ function done_shorten_prompt(result)
 
 function done_expand_prompt(result)
 {
-    if (prompt(chrome.i18n.getMessage(result.status ? "prompt_expand_successful" : "prompt_expand_failed", service.name) + "\n\n" + chrome.i18n.getMessage("prompt_original_url") + "\n" + url, result.msg) != null && result.status)
+    if (prompt(chrome.i18n.getMessage(result.status ? "prompt_expand_successful" : "prompt_expand_failed", [service.name, url]), result.msg) != null && result.status)
     {
         chrome.tabs.create({ url: result.msg });
     }

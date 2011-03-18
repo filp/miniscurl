@@ -70,55 +70,71 @@
     },
     "prompt_shorten_successful":
     {
-        "message": "Successfully shortened URL using $SERVICE$. Click OK to copy the URL to the clipboard.",
+        "message": "Successfully shortened URL using $SERVICE$. Click OK to copy the URL to the clipboard.\n\nOriginal URL:\n$ORIGINAL$",
         "placeholders":
         {
             "service":
             {
                 "content": "$1",
                 "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
             }
         }
     },
     "prompt_shorten_failed":
     {
-        "message": "An error occured while shortening URL using $SERVICE$.",
+        "message": "An error occured while shortening URL using $SERVICE$.\n\nOriginal URL:\n$ORIGINAL$",
         "placeholders":
         {
             "service":
             {
                 "content": "$1",
                 "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
             }
         }
     },
     "prompt_expand_successful":
     {
-        "message": "Successfully expanded URL using $SERVICE$. Click OK to open the URL in a new tab.",
+        "message": "Successfully expanded URL using $SERVICE$. Click OK to open the URL in a new tab.\n\nOriginal URL:\n$ORIGINAL$",
         "placeholders":
         {
             "service":
             {
                 "content": "$1",
                 "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
             }
         }
     },
     "prompt_expand_failed":
     {
-        "message": "An error occured while expanding URL using $SERVICE$.",
+        "message": "An error occured while expanding URL using $SERVICE$.\n\nOriginal URL:\n$ORIGINAL$",
         "placeholders":
         {
             "service":
             {
                 "content": "$1",
                 "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
             }
         }
-    },
-    "prompt_original_url":
-    {
-        "message": "Original URL:"
     },
     
     
