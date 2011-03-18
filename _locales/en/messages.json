@@ -322,7 +322,58 @@
     {
         "message": "Recommended"
     },
+
+
+
+
+
+    "omni_default_shorten":
+    {
+        "message": "Shorten URL"
+    },
+    "omni_default_expand":
+    {
+        "message": "Expand URL"
+    },
+    "omni_specific_shorten":
+    {
+        "message": "Shorten URL using $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "TinyURL"
+            }
+        }
+    },
+    "omni_specific_expand":
+    {
+        "message": "Expand URL using $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "ExpandURL"
+            }
+        }
+    },
+    "omni_invalid_command":
+    {
+        "message": "Invalid command or service ID: $COMMAND$",
+        "placeholders":
+        {
+            "command":
+            {
+                "content": "<any invalid command>"
+            }
+        }
+    },
+    "omni_missing_url":
+    {
+        "message": "Missing URL argument."
+    },
     
+
     
     
     
@@ -346,6 +397,11 @@
     {
         "message": "Get QR Code"
     },
+    
+
+
+
+
     "expandurl_OK":
     {
         "message": "URL doesn't redirect anywhere"
