@@ -59,7 +59,7 @@ function handle_url(url, service_id, callback)
     {
         url = "http://" + url;
     }
-    
+
     // call the data function or replace string components
     if (typeof(service.data) == "function")
     {
@@ -74,7 +74,7 @@ function handle_url(url, service_id, callback)
         data = data.replace("%PASS%", encodeURIComponent(service.password));
         data = data.replace("%API%", encodeURIComponent(service.apikey));
     }
-    
+
     // do the request
     if ("custom" in service)
     {
@@ -128,6 +128,7 @@ function done_shorten_prompt(result)
         to_clipboard(result.msg);
     }
 }
+
 function done_expand_prompt(result)
 {
     if (prompt(chrome.i18n.getMessage(result.status ? "prompt_expand_successful" : "prompt_expand_failed", service.name) + "\n\n" + chrome.i18n.getMessage("prompt_original_url") + "\n" + url, result.msg) != null && result.status)
