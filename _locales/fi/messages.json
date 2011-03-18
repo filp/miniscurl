@@ -1,4 +1,4 @@
-{
+Ôªø{
     "ajax_error":
     {
         "message": "Tuntematon virhe"
@@ -9,11 +9,11 @@
     },
     "ajax_parsererror":
     {
-        "message": "Virhe k‰sitelt‰ess‰ tietoa"
+        "message": "Virhe k√§sitelt√§ess√§ tietoa"
     },
     "internal_error":
     {
-        "message": "Sis‰inen virhe"
+        "message": "Sis√§inen virhe"
     },
     "invalid_url":
     {
@@ -26,19 +26,19 @@
     
     "menu_shorten_this":
     {
-        "message": "Lyhenn‰ t‰m‰"
+        "message": "Lyhenn√§ t√§m√§"
     },
     "menu_shorten_any":
     {
-        "message": "Lyhenn‰..."
+        "message": "Lyhenn√§..."
     },
     "menu_shorten_tab":
     {
-        "message": "Lyhenn‰ nykyinen v‰lilehti"
+        "message": "Lyhenn√§ nykyinen v√§lilehti"
     },
     "menu_expand_this":
     {
-        "message": "Laajenna t‰m‰"
+        "message": "Laajenna t√§m√§"
     },
     "menu_expand_any":
     {
@@ -46,7 +46,7 @@
     },
     "prompt_shorten_url":
     {
-        "message": "Anna URL jonka haluat lyhent‰‰ k‰ytt‰m‰ll‰ $SERVICE$.",
+        "message": "Anna URL jonka haluat lyhent√§√§ k√§ytt√§m√§ll√§ $SERVICE$.",
         "placeholders":
         {
             "service":
@@ -58,7 +58,7 @@
     },
     "prompt_expand_url":
     {
-        "message": "Anna URL jonka haluat laajentaa k‰ytt‰m‰ll‰ $SERVICE$.",
+        "message": "Anna URL jonka haluat laajentaa k√§ytt√§m√§ll√§ $SERVICE$.",
         "placeholders":
         {
             "service":
@@ -70,7 +70,7 @@
     },
     "prompt_shorten_successful":
     {
-        "message": "Onnistuneesti lyhenettiin URL k‰ytt‰m‰ll‰ $SERVICE$. Paina OK kopioidaksesi URL leikepˆyd‰lle.\n\nAlkuper‰inen URL:\n$ORIGINAL$",
+        "message": "Onnistuneesti lyhenettiin URL k√§ytt√§m√§ll√§ $SERVICE$. Paina OK kopioidaksesi URL leikep√∂yd√§lle.\n\nAlkuper√§inen URL:\n$ORIGINAL$",
         "placeholders":
         {
             "service":
@@ -87,7 +87,7 @@
     },
     "prompt_shorten_failed":
     {
-        "message": "Tapahtui virhe lyhenett‰ess‰ URL k‰ytt‰m‰ll‰ $SERVICE$.\n\nAlkuper‰inen URL:\n$ORIGINAL$",
+        "message": "Tapahtui virhe lyhenett√§ess√§ URL k√§ytt√§m√§ll√§ $SERVICE$.\n\nAlkuper√§inen URL:\n$ORIGINAL$",
         "placeholders":
         {
             "service":
@@ -104,7 +104,7 @@
     },
     "prompt_expand_successful":
     {
-        "message": "Onnistuneesti laajenettiin URL k‰ytt‰m‰ll‰ $SERVICE$. Paina OK avataksesi URL uudessa v‰lilehdess‰.\n\nAlkuper‰inen URL:\n$ORIGINAL$",
+        "message": "Onnistuneesti laajenettiin URL k√§ytt√§m√§ll√§ $SERVICE$. Paina OK avataksesi URL uudessa v√§lilehdess√§.\n\nAlkuper√§inen URL:\n$ORIGINAL$",
         "placeholders":
         {
             "service":
@@ -121,7 +121,7 @@
     },
     "prompt_expand_failed":
     {
-        "message": "Tapahtui virhe laajenettaessa URL k‰ytt‰m‰ll‰ $SERVICE$.\n\nAlkuper‰inen URL:\n$ORIGINAL$",
+        "message": "Tapahtui virhe laajenettaessa URL k√§ytt√§m√§ll√§ $SERVICE$.\n\nAlkuper√§inen URL:\n$ORIGINAL$",
         "placeholders":
         {
             "service":
@@ -147,7 +147,7 @@
     },
     "popup_shorten":
     {
-        "message": "Lyhenn‰ k‰ytt‰m‰ll‰ $SERVICE$",
+        "message": "Lyhenn√§ k√§ytt√§m√§ll√§ $SERVICE$",
         "placeholders":
         {
             "service":
@@ -159,7 +159,7 @@
     },
     "popup_expand":
     {
-        "message": "Laajenna k‰ytt‰m‰ll‰ $SERVICE$",
+        "message": "Laajenna k√§ytt√§m√§ll√§ $SERVICE$",
         "placeholders":
         {
             "service":
@@ -175,7 +175,7 @@
     },
     "popup_copy":
     {
-        "message": "Kopio leikepˆyd‰lle"
+        "message": "Kopio leikep√∂yd√§lle"
     },
     "popup_copied":
     {
@@ -183,11 +183,11 @@
     },
     "popup_another_url":
     {
-        "message": "Yrit‰ toista URL"
+        "message": "Yrit√§ toista URL"
     },
     "popup_another_service":
     {
-        "message": "Yrit‰ toista palvelua"
+        "message": "Yrit√§ toista palvelua"
     },
 
     
@@ -216,7 +216,7 @@
     },
     "options_tab_credentials":
     {
-        "message": "K‰ytt‰j‰tiedot"
+        "message": "K√§ytt√§j√§tiedot"
     },
     "options_tab_custom":
     {
@@ -240,7 +240,7 @@
     },
     "options_label_shortener":
     {
-        "message": "Oletus lyhent‰j‰"
+        "message": "Oletus lyhent√§j√§"
     },
     "options_label_expander":
     {
@@ -248,19 +248,19 @@
     },
     "options_label_enabled":
     {
-        "message": "K‰ytˆss‰ olevat palvelut"
+        "message": "K√§yt√∂ss√§ olevat palvelut"
     },
     "options_label_use_default":
     {
-        "message": "K‰yt‰ oletus palvelua"
+        "message": "K√§yt√§ oletus palvelua"
     },
     "options_label_use_default_small":
     {
-        "message": "Automaattisesti k‰yt‰ oletuspalvelua halutulle toimenpiteelle' sen sijaan ett‰ valitsen sen itse"
+        "message": "Automaattisesti k√§yt√§ oletuspalvelua halutulle toimenpiteelle' sen sijaan ett√§ valitsen sen itse"
     },
     "options_shorten":
     {
-        "message": "Lyhenn‰"
+        "message": "Lyhenn√§"
     },
     
     "options_expand":
@@ -273,7 +273,7 @@
     },
     "options_label_quick_mode_small":
     {
-        "message": "Automaattisesti k‰yt‰ nykyisen v‰lilehden URL lyhennett‰ess‰"
+        "message": "Automaattisesti k√§yt√§ nykyisen v√§lilehden URL lyhennett√§ess√§"
     },
     "options_label_auto_copy":
     {
@@ -289,7 +289,7 @@
     },
     "options_label_username":
     {
-        "message": "K‰ytt‰j‰nimi"
+        "message": "K√§ytt√§j√§nimi"
     },
     "options_label_password":
     {
@@ -313,7 +313,7 @@
     },
     "options_custom_help":
     {
-        "message": "Paina t‰st‰ n‰hd‰ksesi ohjeet omien palveluiden lis‰ykseen Miniscurliin"
+        "message": "Paina t√§st√§ n√§hd√§ksesi ohjeet omien palveluiden lis√§ykseen Miniscurliin"
     },
     "options_required":
     {
@@ -338,11 +338,11 @@
 
     "omni_default_shorten":
     {
-        "message": "Lyhenn‰ URL"
+        "message": "Lyhenn√§ URL"
     },
     "omni_shorten_tab":
     {
-        "message": "Lyhenn‰ nykyinen v‰lilehti"
+        "message": "Lyhenn√§ nykyinen v√§lilehti"
     },
     "omni_default_expand":
     {
@@ -350,7 +350,7 @@
     },
     "omni_specific_shorten":
     {
-        "message": "Lyhenn‰ URL k‰ytt‰m‰ll‰ $SERVICE$",
+        "message": "Lyhenn√§ URL k√§ytt√§m√§ll√§ $SERVICE$",
         "placeholders":
         {
             "service":
@@ -361,7 +361,7 @@
     },
     "omni_specific_expand":
     {
-        "message": "Laajenna URL k‰ytt‰m‰ll‰ $SERVICE$",
+        "message": "Laajenna URL k√§ytt√§m√§ll√§ $SERVICE$",
         "placeholders":
         {
             "service":
@@ -388,7 +388,7 @@
     
     "twitter_title":
     {
-        "message": "Julkaise Twitteriss‰"
+        "message": "Julkaise Twitteriss√§"
     },
     "facebook_title":
     {
@@ -396,7 +396,7 @@
     },
     "reddit_title":
     {
-        "message": "Julkaise Redditiss‰"
+        "message": "Julkaise Redditiss√§"
     },
     "buzz_title":
     {
@@ -404,7 +404,7 @@
     },
     "qr_title":
     {
-        "message": "Paina t‰st‰ saadaksesi QR koodin"
+        "message": "Paina t√§st√§ saadaksesi QR koodin"
     },
     
 
@@ -413,7 +413,7 @@
 
     "expandurl_OK":
     {
-        "message": "URL ei ohjaa mihink‰‰n"
+        "message": "URL ei ohjaa mihink√§√§n"
     },
     "expandurl_InvalidURL":
     {
