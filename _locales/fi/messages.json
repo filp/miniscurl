@@ -1,0 +1,430 @@
+{
+    "ajax_error":
+    {
+        "message": "Tuntematon virhe"
+    },
+    "ajax_timeout":
+    {
+        "message": "Palvelu aikakatkaistiin"
+    },
+    "ajax_parsererror":
+    {
+        "message": "Virhe käsiteltäessä tietoa"
+    },
+    "internal_error":
+    {
+        "message": "Sisäinen virhe"
+    },
+    "invalid_url":
+    {
+        "message": "Virheellinen URL"
+    },
+    
+    
+    
+    
+    
+    "menu_shorten_this":
+    {
+        "message": "Lyhennä tämä"
+    },
+    "menu_shorten_any":
+    {
+        "message": "Lyhennä..."
+    },
+    "menu_shorten_tab":
+    {
+        "message": "Lyhennä nykyinen välilehti"
+    },
+    "menu_expand_this":
+    {
+        "message": "Laajenna tämä"
+    },
+    "menu_expand_any":
+    {
+        "message": "Laajenna..."
+    },
+    "prompt_shorten_url":
+    {
+        "message": "Anna URL jonka haluat lyhentää käyttämällä $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "prompt_expand_url":
+    {
+        "message": "Anna URL jonka haluat laajentaa käyttämällä $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "prompt_shorten_successful":
+    {
+        "message": "Onnistuneesti lyhenettiin URL käyttämällä $SERVICE$. Paina OK kopioidaksesi URL leikepöydälle.\n\nAlkuperäinen URL:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    "prompt_shorten_failed":
+    {
+        "message": "Tapahtui virhe lyhenettäessä URL käyttämällä $SERVICE$.\n\nAlkuperäinen URL:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_successful":
+    {
+        "message": "Onnistuneesti laajenettiin URL käyttämällä $SERVICE$. Paina OK avataksesi URL uudessa välilehdessä.\n\nAlkuperäinen URL:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_failed":
+    {
+        "message": "Tapahtui virhe laajenettaessa URL käyttämällä $SERVICE$.\n\nAlkuperäinen URL:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "popup_pick":
+    {
+        "message": "Valitse palvelu"
+    },
+    "popup_shorten":
+    {
+        "message": "Lyhennä käyttämällä $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_expand":
+    {
+        "message": "Laajenna käyttämällä $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_cancel":
+    {
+        "message": "Peruuta"
+    },
+    "popup_copy":
+    {
+        "message": "Kopio leikepöydälle"
+    },
+    "popup_copied":
+    {
+        "message": "Kopiotu!"
+    },
+    "popup_another_url":
+    {
+        "message": "Yritä toista URL"
+    },
+    "popup_another_service":
+    {
+        "message": "Yritä toista palvelua"
+    },
+
+    
+    
+    
+    
+    
+    "options_title":
+    {
+        "message": "$NAME$ Asetukset",
+        "placeholders":
+        {
+            "name":
+            {
+                "content": "Miniscurl"
+            }
+        }
+    },
+    "options_tab_general":
+    {
+        "message": "Yleiset"
+    },
+    "options_tab_popup":
+    {
+        "message": "Ponnahdusikkuna asetukset"
+    },
+    "options_tab_credentials":
+    {
+        "message": "Käyttäjätiedot"
+    },
+    "options_tab_custom":
+    {
+        "message": "Omat palvelut"
+    },
+    "options_button_save":
+    {
+        "message": "Tallenna"
+    },
+    "options_button_saved":
+    {
+        "message": "Tallenettu!"
+    },
+    "options_button_new":
+    {
+        "message": "Uusi"
+    },
+    "options_button_delete":
+    {
+        "message": "Poista"
+    },
+    "options_label_shortener":
+    {
+        "message": "Oletus lyhentäjä"
+    },
+    "options_label_expander":
+    {
+        "message": "Oletus laajentaja"
+    },
+    "options_label_enabled":
+    {
+        "message": "Käytössä olevat palvelut"
+    },
+    "options_label_use_default":
+    {
+        "message": "Käytä oletus palvelua"
+    },
+    "options_label_use_default_small":
+    {
+        "message": "Automaattisesti käytä oletuspalvelua halutulle toimenpiteelle' sen sijaan että valitsen sen itse"
+    },
+    "options_shorten":
+    {
+        "message": "Lyhennä"
+    },
+    
+    "options_expand":
+    {
+        "message": "Laajenna"
+    },
+    "options_label_quick_mode":
+    {
+        "message": "Pikatila"
+    },
+    "options_label_quick_mode_small":
+    {
+        "message": "Automaattisesti käytä nykyisen välilehden URL lyhennettäessä"
+    },
+    "options_label_auto_copy":
+    {
+        "message": "Auto-kopioi"
+    },
+    "options_label_auto_copy_small":
+    {
+        "message": "Automatically copies the shortened/expanded URL to the clipboard"
+    },
+    "options_label_service":
+    {
+        "message": "Palvelu"
+    },
+    "options_label_username":
+    {
+        "message": "Käyttäjänimi"
+    },
+    "options_label_password":
+    {
+        "message": "Salasana"
+    },
+    "options_label_api_key":
+    {
+        "message": "API Avain"
+    },
+    "options_label_service_id":
+    {
+        "message": "Palvelu ID"
+    },
+    "options_label_service_id_small":
+    {
+        "message": "Uniikki ID luotavalle palvelulle"
+    },
+    "options_label_edit":
+    {
+        "message": "Muokkaa"
+    },
+    "options_custom_help":
+    {
+        "message": "Paina tästä nähdäksesi ohjeet omien palveluiden lisäykseen Miniscurliin"
+    },
+    "options_required":
+    {
+        "message": "Vaadittu"
+    },
+    "options_optional":
+    {
+        "message": "Vaihtoehtoinen"
+    },
+    "options_category_all":
+    {
+        "message": "Kaikki"
+    },
+    "options_category_recommended":
+    {
+        "message": "Suositeltu"
+    },
+
+
+
+
+
+    "omni_default_shorten":
+    {
+        "message": "Lyhennä URL"
+    },
+    "omni_shorten_tab":
+    {
+        "message": "Lyhennä nykyinen välilehti"
+    },
+    "omni_default_expand":
+    {
+        "message": "Laajenna URL"
+    },
+    "omni_specific_shorten":
+    {
+        "message": "Lyhennä URL käyttämällä $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "TinyURL"
+            }
+        }
+    },
+    "omni_specific_expand":
+    {
+        "message": "Laajenna URL käyttämällä $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "ExpandURL"
+            }
+        }
+    },
+    "omni_invalid_command":
+    {
+        "message": "Tuntematon komento tai palvelu ID: $COMMAND$",
+        "placeholders":
+        {
+            "command":
+            {
+                "content": "<any invalid command>"
+            }
+        }
+    },
+    "omni_missing_url":
+    {
+        "message": "URL puuttuu."
+    },
+    
+
+    
+    
+    
+    "twitter_title":
+    {
+        "message": "Julkaise Twitterissä"
+    },
+    "facebook_title":
+    {
+        "message": "Julkaise Facebookissa"
+    },
+    "reddit_title":
+    {
+        "message": "Julkaise Redditissä"
+    },
+    "buzz_title":
+    {
+        "message": "Julkaise Google Buzzissa"
+    },
+    "qr_title":
+    {
+        "message": "Paina tästä saadaksesi QR koodin"
+    },
+    
+
+
+
+
+    "expandurl_OK":
+    {
+        "message": "URL ei ohjaa mihinkään"
+    },
+    "expandurl_InvalidURL":
+    {
+        "message": "Virheellinen URL"
+    },
+    "expandurl_InternalError":
+    {
+        "message": "Serveri virhe"
+    }
+}
