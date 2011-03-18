@@ -1,0 +1,425 @@
+{
+    "ajax_error":
+    {
+        "message": "Nieznany błąd"
+    },
+    "ajax_timeout":
+    {
+        "message": "Przekroczony limit czasu"
+    },
+    "ajax_parsererror":
+    {
+        "message": "Błąd parsowania danych"
+    },
+    "internal_error":
+    {
+        "message": "Wewnętrzny błąd"
+    },
+    "invalid_url":
+    {
+        "message": "Nieprawidłowy adres"
+    },
+    
+    
+    
+    
+    
+    "menu_shorten_this":
+    {
+        "message": "Skróć to"
+    },
+    "menu_shorten_any":
+    {
+        "message": "Skróć cokolwiek..."
+    },
+    "menu_shorten_tab":
+    {
+        "message": "Skróć aktywną zakładkę"
+    },
+    "menu_expand_this":
+    {
+        "message": "Rozwiń to"
+    },
+    "menu_expand_any":
+    {
+        "message": "Rozwiń cokolwiek..."
+    },
+    "prompt_shorten_url":
+    {
+        "message": "Wpisz adres, który chcesz skrócić przy użyciu $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "prompt_expand_url":
+    {
+        "message": "Wpisz adres, który chcesz rozwinąć przy użyciu $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "prompt_shorten_successful":
+    {
+        "message": "Pomyślnie skrócono adres przy użyciu $SERVICE$. Kliknij OK, aby skopiować adres do schowka.\n\nOryginalny adres:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    "prompt_shorten_failed":
+    {
+        "message": "Wystąpił błąd przy skracaniu adresu za pomocą $SERVICE$.\n\nOryginalny adres:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_successful":
+    {
+        "message": "Pomyślnie rozwinięto adres przy użyciu $SERVICE$. Kliknij OK, aby otworzyć go w nowej zakładce.\n\nOryginalny adres:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_failed":
+    {
+        "message": "Wystąpił błąd przy rozwijaniu adresu za pomocą $SERVICE$.\n\nOryginalny adres:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "popup_pick":
+    {
+        "message": "Wybierz usługę"
+    },
+    "popup_shorten":
+    {
+        "message": "Skróć za pomocą $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_expand":
+    {
+        "message": "Rozwiń za pomocą $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_cancel":
+    {
+        "message": "Anuluj"
+    },
+    "popup_copy":
+    {
+        "message": "Kopiuj do schowka"
+    },
+    "popup_copied":
+    {
+        "message": "Skopiowano!"
+    },
+    "popup_another_url":
+    {
+        "message": "Spróbuj z innym adresem"
+    },
+    "popup_another_service":
+    {
+        "message": "Spróbuj innej usługi"
+    },
+    
+    
+    
+    
+    
+    "options_title":
+    {
+        "message": "Opcje $NAME$",
+        "placeholders":
+        {
+            "name":
+            {
+                "content": "Miniscurl"
+            }
+        }
+    },
+    "options_tab_general":
+    {
+        "message": "Ogólne"
+    },
+    "options_tab_popup":
+    {
+        "message": "Opcje wyskakujących okienek"
+    },
+    "options_tab_credentials":
+    {
+        "message": "Dane logowania"
+    },
+    "options_tab_custom":
+    {
+        "message": "Usługi niestandardowe"
+    },
+    "options_button_save":
+    {
+        "message": "Zapisz"
+    },
+    "options_button_saved":
+    {
+        "message": "Zapisano!"
+    },
+    "options_button_new":
+    {
+        "message": "Nowa"
+    },
+    "options_button_delete":
+    {
+        "message": "Usuń"
+    },
+    "options_label_shortener":
+    {
+        "message": "Domyślna usługa skracająca"
+    },
+    "options_label_expander":
+    {
+        "message": "Domyślna usługa rozwijająca"
+    },
+    "options_label_enabled":
+    {
+        "message": "Włączone usługi"
+    },
+    "options_label_use_default":
+    {
+        "message": "Użyj domyślnej"
+    },
+    "options_label_use_default_small":
+    {
+        "message": "Automatycznie wybiera domyślną usługę do wykonywania danej czynności, zamiast pozwolić Ci wybrać"
+    },
+    "options_shorten":
+    {
+        "message": "Skróć"
+    },
+    
+    "options_expand":
+    {
+        "message": "Rozwiń"
+    },
+    "options_label_quick_mode":
+    {
+        "message": "Tryb szybki"
+    },
+    "options_label_quick_mode_small":
+    {
+        "message": "Automatycznie używa adresu z aktywnej zakładki"
+    },
+    "options_label_auto_copy":
+    {
+        "message": "Automatyczne kopiowanie"
+    },
+    "options_label_auto_copy_small":
+    {
+        "message": "Automatycznie kopiuje skrócony/rozwinięty adres do schowka"
+    },
+    "options_label_service":
+    {
+        "message": "Usługa"
+    },
+    "options_label_username":
+    {
+        "message": "Nazwa użytkownika"
+    },
+    "options_label_password":
+    {
+        "message": "Hasło"
+    },
+    "options_label_api_key":
+    {
+        "message": "Klucz API"
+    },
+    "options_label_service_id":
+    {
+        "message": "ID usługi"
+    },
+    "options_label_service_id_small":
+    {
+        "message": "Unikalny identyfikator do utworzenia dla usługi"
+    },
+    "options_label_edit":
+    {
+        "message": "Edytuj"
+    },
+    "options_custom_help":
+    {
+        "message": "Kliknij tu po dokumentację dotyczącą dodawania niestandardowych usług do Miniscurl"
+    },
+    "options_required":
+    {
+        "message": "Wymagane"
+    },
+    "options_optional":
+    {
+        "message": "Opcjonalne"
+    },
+    "options_category_all":
+    {
+        "message": "Wszystkie"
+    },
+    "options_category_recommended":
+    {
+        "message": "Zalecane"
+    },
+
+
+
+
+
+    "omni_default_shorten":
+    {
+        "message": "Skróć adres"
+    },
+    "omni_shorten_tab":
+    {
+        "message": "Skróć adres z aktywnej zakładki"
+    },
+    "omni_default_expand":
+    {
+        "message": "Rozwiń adres"
+    },
+    "omni_specific_shorten":
+    {
+        "message": "Skróć adres za pomocą $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "TinyURL"
+            }
+        }
+    },
+    "omni_specific_expand":
+    {
+        "message": "Rozwiń adres za pomocą $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "ExpandURL"
+            }
+        }
+    },
+    "omni_invalid_command":
+    {
+        "message": "Nieprawidłowe ID polecenia lub usługi: $COMMAND$",
+        "placeholders":
+        {
+            "command":
+            {
+                "content": "<dowolne nieprawidłowe polecenie>"
+            }
+        }
+    },
+    
+
+    
+    
+    
+    "twitter_title":
+    {
+        "message": "Podziel się na Twitterze"
+    },
+    "facebook_title":
+    {
+        "message": "Podziel się na Facebooku"
+    },
+    "reddit_title":
+    {
+        "message": "Podziel się na Reddit"
+    },
+    "buzz_title":
+    {
+        "message": "Podziel się na Google Buzz"
+    },
+    "qr_title":
+    {
+        "message": "Pobierz kod QR"
+    },
+    
+
+
+
+
+    "expandurl_OK":
+    {
+        "message": "Adres nigdzie nie przekierowuje"
+    },
+    "expandurl_InvalidURL":
+    {
+        "message": "Nieprawidłowy adres"
+    },
+    "expandurl_InternalError":
+    {
+        "message": "Błąd serwera"
+    }
+}

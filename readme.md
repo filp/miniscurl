@@ -13,6 +13,8 @@ Alternatively, if you're not that tech-savvy (or don't want to download and mess
 ## Contributors
  * [Filipe Dobreira](https://github.com/FilipeD) - General assistance/design help (and being awesome)
  * [Matias Kangasjärvelä](https://github.com/M4T1A5) - Finnish translation
+ * Bartłomiej Kamiński - Polish translation
+ * [Bjørn Tore Håvie](https://github.com/ITSBTH) - Assistance with Norwegian translation
 
 ## License
 
