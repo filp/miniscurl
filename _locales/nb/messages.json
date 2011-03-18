@@ -1,0 +1,424 @@
+{
+    "ajax_error":
+    {
+        "message": "Ukjent feil"
+    },
+    "ajax_timeout":
+    {
+        "message": "Tidsavbrudd"
+    },
+    "ajax_parsererror":
+    {
+        "message": "Datatolkningsfeil"
+    },
+    "internal_error":
+    {
+        "message": "Intern feil"
+    },
+    "invalid_url":
+    {
+        "message": "Ugyldig URL"
+    },
+    
+    
+    
+    
+    
+    "menu_shorten_this":
+    {
+        "message": "Forkort dennee"
+    },
+    "menu_shorten_any":
+    {
+        "message": "Forkort annet..."
+    },
+    "menu_shorten_tab":
+    {
+        "message": "Forkort denne siden"
+    },
+    "menu_expand_this":
+    {
+        "message": "Utvid denne"
+    },
+    "menu_expand_any":
+    {
+        "message": "Utvid annet..."
+    },
+    "prompt_shorten_url":
+    {
+        "message": "Skriv in URLen du vil forkorte med $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "prompt_expand_url":
+    {
+        "message": "Skriv inn URLen du vil utvide med $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "prompt_shorten_successful":
+    {
+        "message": "Forkortningen med $SERVICE$ var vellykket. Trykk OK for å kopiere URLen til utklippstavla.\n\nOpprinnelig URL:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    "prompt_shorten_failed":
+    {
+        "message": "En feil oppsto med forkortningen med $SERVICE$.\n\nOpprinnelig URL:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_successful":
+    {
+        "message": "Løsingen med $SERVICE$ var vellykket. Trykk OK for å kopiere URLen til utklippstavla.\n\nOpprinnelig URL:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_failed":
+    {
+        "message": "En feil oppsto med Løsingen med $SERVICE$.\n\nOpprinnelig URL:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "popup_pick":
+    {
+        "message": "Velg en tjeneste"
+    },
+    "popup_shorten":
+    {
+        "message": "Forkort med $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_expand":
+    {
+        "message": "Utvid med $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_cancel":
+    {
+        "message": "Avbryt"
+    },
+    "popup_copy":
+    {
+        "message": "Kopier til utklippstavla"
+    },
+    "popup_copied":
+    {
+        "message": "Kopiert!"
+    },
+    "popup_another_url":
+    {
+        "message": "Prøv en annen URL"
+    },
+    "popup_another_service":
+    {
+        "message": "Prøv en annen tjeneste"
+    },
+    
+    
+    
+    
+    
+    "options_title":
+    {
+        "message": "$NAME$ Instillinger",
+        "placeholders":
+        {
+            "name":
+            {
+                "content": "Miniscurl"
+            }
+        }
+    },
+    "options_tab_general":
+    {
+        "message": "Generelt"
+    },
+    "options_tab_popup":
+    {
+        "message": "Sprettoppvindu"
+    },
+    "options_tab_credentials":
+    {
+        "message": "Legitimasjon"
+    },
+    "options_tab_custom":
+    {
+        "message": "Egendefinerte tjenester"
+    },
+    "options_button_save":
+    {
+        "message": "Lagre"
+    },
+    "options_button_saved":
+    {
+        "message": "Lagret!"
+    },
+    "options_button_new":
+    {
+        "message": "Ny"
+    },
+    "options_button_delete":
+    {
+        "message": "Slett"
+    },
+    "options_label_shortener":
+    {
+        "message": "Standard forkorter"
+    },
+    "options_label_expander":
+    {
+        "message": "Standard løser"
+    },
+    "options_label_enabled":
+    {
+        "message": "Aktiverte tjenester"
+    },
+    "options_label_use_default":
+    {
+        "message": "Bruk standard-tjeneste"
+    },
+    "options_label_use_default_small":
+    {
+        "message": "Bruker standard-tjenesten i stedet for å spør deg hver gang"
+    },
+    "options_shorten":
+    {
+        "message": "Forkort"
+    },
+    "options_expand":
+    {
+        "message": "Løs"
+    },
+    "options_label_quick_mode":
+    {
+        "message": "Hurtigmodus"
+    },
+    "options_label_quick_mode_small":
+    {
+        "message": "Bruker automatisk URLen til den åpne siden"
+    },
+    "options_label_auto_copy":
+    {
+        "message": "Auto-kopier"
+    },
+    "options_label_auto_copy_small":
+    {
+        "message": "Kopierer automatisk den forkortede/løste URLen til utklippstavla"
+    },
+    "options_label_service":
+    {
+        "message": "Tjeneste"
+    },
+    "options_label_username":
+    {
+        "message": "Brukernavn"
+    },
+    "options_label_password":
+    {
+        "message": "Passord"
+    },
+    "options_label_api_key":
+    {
+        "message": "API Nøkkel"
+    },
+    "options_label_service_id":
+    {
+        "message": "Tjeneste-ID"
+    },
+    "options_label_service_id_small":
+    {
+        "message": "En unik ID for tjenesten du vil opprette"
+    },
+    "options_label_edit":
+    {
+        "message": "Rediger"
+    },
+    "options_custom_help":
+    {
+        "message": "Klikk her for dokumentasjon om å legge til egendefinerte tjenester til Miniscurl"
+    },
+    "options_required":
+    {
+        "message": "Påkrevd"
+    },
+    "options_optional":
+    {
+        "message": "Valgfri"
+    },
+    "options_category_all":
+    {
+        "message": "Alle"
+    },
+    "options_category_recommended":
+    {
+        "message": "Anbefalte"
+    },
+
+
+
+
+
+    "omni_default_shorten":
+    {
+        "message": "Forkort URL"
+    },
+    "omni_shorten_tab":
+    {
+        "message": "Forkort nåværende side"
+    },
+    "omni_default_expand":
+    {
+        "message": "Løs URL"
+    },
+    "omni_specific_shorten":
+    {
+        "message": "Forkort URL med $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "TinyURL"
+            }
+        }
+    },
+    "omni_specific_expand":
+    {
+        "message": "Løs URL med $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "ExpandURL"
+            }
+        }
+    },
+    "omni_invalid_command":
+    {
+        "message": "Ugyldig kommando eller tjeneste-ID: $COMMAND$",
+        "placeholders":
+        {
+            "command":
+            {
+                "content": "<any invalid command>"
+            }
+        }
+    },
+    
+
+    
+    
+    
+    "twitter_title":
+    {
+        "message": "Del på Twitter"
+    },
+    "facebook_title":
+    {
+        "message": "Del på Fjesboka"
+    },
+    "reddit_title":
+    {
+        "message": "Del på Reddit"
+    },
+    "buzz_title":
+    {
+        "message": "Del på Google Buzz"
+    },
+    "qr_title":
+    {
+        "message": "Se QR Code"
+    },
+    
+
+
+
+
+    "expandurl_OK":
+    {
+        "message": "URL leder ingensteds"
+    },
+    "expandurl_InvalidURL":
+    {
+        "message": "Ugyldig URL"
+    },
+    "expandurl_InternalError":
+    {
+        "message": "Tjenerfeil"
+    }
+}

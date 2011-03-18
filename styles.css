@@ -166,7 +166,9 @@ div#anothers
     position: absolute;
     bottom: 16px;
     text-align: center;
-}/* Options */
+}
+
+/* Options */
 
 html.options
 {
@@ -247,7 +249,7 @@ h2.selected:hover
 div#header
 {
     min-height: 128px;
-    width: 500px;
+    min-width: 500px;
     margin: 0 auto;
 }
 
