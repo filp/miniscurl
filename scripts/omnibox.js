@@ -46,32 +46,29 @@ chrome.omnibox.onInputChanged.addListener(function(text, suggest)
 chrome.omnibox.onInputEntered.addListener(function(text)
 {
     args = text.split(" ");
+    url = "";
     if (args[0] in services || ["sh", "shorten", "ex", "expand"].indexOf(args[0]) >= 0)
     {
-        if (args.length > 1)
+        if (args.length <= 1 || args[1] == "this")
         {
-            url = args[1];
-            if (url == "this")
-            {
-                chrome.tabs.getSelected(null, function(tab) { url = tab.url; });
-            }
-
-            if (["sh", "shorten"].indexOf(args[0]) >= 0)
-            {
-                handle_url(url, get_config("shortener"), done_shorten_prompt);
-            }
-            else if (["ex", "expand"].indexOf(args[0]) >= 0)
-            {
-                handle_url(url, get_config("expander"), done_expand_prompt);
-            }
-            else
-            {
-                handle_url(url, args[0], get_service(args[0]).categories.indexOf("expanding") >= 0 ? done_expand_prompt : done_shorten_prompt);
-            }
+            chrome.tabs.getSelected(null, function(tab) { url = tab.url; });
         }
         else
         {
-            alert(chrome.i18n.getMessage("omni_missing_url"));
+            url = args[1];
+        }
+
+        if (["sh", "shorten"].indexOf(args[0]) >= 0)
+        {
+            handle_url(url, get_config("shortener"), done_shorten_prompt);
+        }
+        else if (["ex", "expand"].indexOf(args[0]) >= 0)
+        {
+            handle_url(url, get_config("expander"), done_expand_prompt);
+        }
+        else
+        {
+            handle_url(url, args[0], get_service(args[0]).categories.indexOf("expanding") >= 0 ? done_expand_prompt : done_shorten_prompt);
         }
     }
     else
