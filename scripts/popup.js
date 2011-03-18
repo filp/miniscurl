@@ -27,8 +27,6 @@ $(function()
     
     // initialize labels etc from i18n
     $("div#listhelper").text(chrome.i18n.getMessage("popup_pick"));
-    $("span#cur_tab a").text(chrome.i18n.getMessage("popup_cur_tab"));
-    //$("span#from_clip a").text(chrome.i18n.getMessage("popup_from_clip"));
     $("div#another_url a").text(chrome.i18n.getMessage("popup_another_url"));
     $("div#another_service a").text(chrome.i18n.getMessage("popup_another_service"));
     
@@ -57,12 +55,6 @@ $(function()
     doc.input.keydown(function(event)
 	{
 		if (event.keyCode == 13) { doc.button.click(); }
-	});
-    
-    // input helpers
-	$("span#cur_tab a").click(function()
-	{
-		chrome.tabs.getSelected(null, function(tab) { doc.input.val(tab.url) });
 	});
     
     // the button
@@ -98,7 +90,7 @@ $(function()
         cur_service = get_service(cur_service_id);
         if (get_config("quick_mode"))
         {
-            $("div#another_url, div#sharers, div#helpers").hide();
+            $("div#another_url, div#sharers").hide();
             $("div#main").show();
             chrome.tabs.getSelected(null, function(tab)
             {
@@ -144,8 +136,8 @@ function button_click()
 // shows the list of services, prompting the user to pick one
 function pick_service()
 {
-    $("div#list").show();//slideDown();
-    $("div#main").hide();//slideUp();
+    $("div#list").show();
+    $("div#main").hide();
 }
 
 // shows the URL input
@@ -162,8 +154,14 @@ function get_url()
     {
         $("div#another_url, div#sharers").fadeOut();
     }
-        
-    doc.input.val("http://").attr("readonly", false);
+
+    chrome.tabs.getSelected(null, function(tab)
+    {
+        doc.input.val(cur_service.categories.indexOf("expanding") >= 0 ? "" : tab.url).attr("readonly", false);
+        $("div#list").hide();
+        $("div#main").show();
+        doc.input.select().focus();
+    });
     set_icon("chrome://favicon/" + cur_service.site);
     
     if (cur_service.categories.indexOf("expanding") >= 0)
@@ -175,10 +173,7 @@ function get_url()
         doc.button.text(chrome.i18n.getMessage("popup_shorten", cur_service.name));
     }
     
-    $("div#list").hide();//slideUp();
-    $("div#main").show();//slideDown();
-    doc.input.select().focus();
-    $("div#helpers").slideDown();
+
     button_handler = handle_url;
 }
 
@@ -187,7 +182,6 @@ function while_handling()
 {
     ongoing_request = true;
 	doc.input.attr("readonly", true);
-    $("div#helpers").slideUp();
     set_icon(chrome.extension.getURL("img/loading.gif"));
     doc.button.text(chrome.i18n.getMessage("popup_cancel"));
     button_handler = get_url;

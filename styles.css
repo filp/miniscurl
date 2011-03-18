@@ -126,17 +126,6 @@ input.popup
 	background-size: 16px;
 }
 
-div#helpers
-{
-    height: 20px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #FFFFFF;
-    position: relative;
-    top: -10px;
-    margin: 0;
-}
-
 button.popup
 {
     
@@ -352,33 +341,6 @@ div#button
 {
     width: 125px;
     margin: 0 auto;
-}
-
-span.inputhelper
-{
-    margin: 0 5px;
-    font-size: 14px;
-}
-
-span.inputhelper > a
-{
-    color: #4B4B4B;
-    text-decoration: none;
-}
-
-span.inputhelper > a:hover
-{
-    color: #000;
-}
-
-span#cur_tab
-{
-    float: left;
-}
-
-span#from_clip
-{
-    float: right;
 }
 
 button#save, button#delete
