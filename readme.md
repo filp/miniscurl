@@ -1,7 +1,7 @@
 # Miniscurl
 ### URL shortener/expander for Google Chrome™
 
-[![Miniscurl](http://i.imgur.com/Z7DKi.png)](http://miniscurl.dafk.net "Visit the Miniscurl home page!")        [![Available in the Chrome Web Store](http://code.google.com/chrome/webstore/images/branding/ChromeWebStore_BadgeWBorder_206x58.png)](https://chrome.google.com/webstore/detail/eclilalbnmdonojgjmkekinflhodgoii "Download Miniscurl from the Chrome Webstore™")
+[![Miniscurl](http://i.imgur.com/Z7DKi.png)](http://miniscurl.dafk.net "Visit the Miniscurl home page!")        [![Available in the Chrome Web Store](http://code.google.com/chrome/webstore/images/branding/ChromeWebStore_BadgeWBorder_206x58.png)](https://chrome.google.com/webstore/detail/eclilalbnmdonojgjmkekinflhodgoii "Download Miniscurl from the Chrome Web Store™")
 
 Miniscurl is an advanced URL shortening and expanding extension for Google Chrome™. It provides several ways of shortening and expanding URLs, including a right-click interface for links, a visual popup menu and a "command line interface" for the omnibox.
 
@@ -14,7 +14,7 @@ Alternatively, if you're not that tech-savvy (or don't want to download and mess
  * [Filipe Dobreira](https://github.com/FilipeD) - General assistance/design help (and being awesome)
  * [Matias Kangasjärvelä](https://github.com/M4T1A5) - Finnish translation
  * Bartłomiej Kamiński - Polish translation
- * [Bjørn Tore Håvie](https://github.com/ITSBTH) - Assistance with Norwegian translation
+ * [Bjørn Tore Håvie](https://github.com/itsbth) - Assistance with Norwegian translation
 
 ## License
 
