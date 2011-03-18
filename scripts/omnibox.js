@@ -25,6 +25,7 @@ chrome.omnibox.onInputChanged.addListener(function(text, suggest)
     if ("shorten".substring(0, args[0].length) == args[0])
     {
         suggests_top.push({ content: "shorten ", description: "<match>" + "shorten".substring(0, args[0].length) + "</match>" + "shorten".substring(args[0].length) + " <dim>" + chrome.i18n.getMessage("omni_default_shorten") + "</dim>" });
+        suggests_top.push({ content: "shorten this", description: "<match>" + "shorten".substring(0, args[0].length) + "</match>" + "shorten".substring(args[0].length) + " this <dim>" + chrome.i18n.getMessage("omni_shorten_tab") + "</dim>" });
     }
     if ("expand".substring(0, args[0].length) == args[0])
     {
@@ -50,6 +51,11 @@ chrome.omnibox.onInputEntered.addListener(function(text)
         if (args.length > 1)
         {
             url = args[1];
+            if (url == "this")
+            {
+                chrome.tabs.getSelected(null, function(tab) { url = tab.url; });
+            }
+
             if (["sh", "shorten"].indexOf(args[0]) >= 0)
             {
                 handle_url(url, get_config("shortener"), done_shorten_prompt);

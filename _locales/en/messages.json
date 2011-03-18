@@ -331,6 +331,10 @@
     {
         "message": "Shorten URL"
     },
+    "omni_shorten_tab":
+    {
+        "message": "Shorten current tab"
+    },
     "omni_default_expand":
     {
         "message": "Expand URL"
