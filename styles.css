@@ -194,11 +194,6 @@ fieldset
 	-webkit-box-shadow: 0 0 30px #0085B2;
 }
 
-img#icon
-{
-    float: left;
-}
-
 h1
 {
     font-family: Lobster, serif;
@@ -206,7 +201,7 @@ h1
     display: inline;
     margin-left: 20px;
     position: relative;
-    top: 40px;
+    top: -40px;
 }
 
 div#tabs
@@ -249,8 +244,7 @@ h2.selected:hover
 div#header
 {
     min-height: 128px;
-    min-width: 500px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 div#options
