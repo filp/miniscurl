@@ -340,8 +340,7 @@ div#listhelper
 
 div.button
 {
-    width: 125px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 button#save, button#delete
@@ -352,6 +351,12 @@ button#save, button#delete
 button#delete
 {
     margin-left: 5px;
+}
+
+button#logout
+{
+    margin-left: 5px;
+    display: none;
 }
 
 label

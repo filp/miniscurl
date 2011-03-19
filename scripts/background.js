@@ -65,6 +65,11 @@ chrome.extension.onRequest.addListener(function(request, sender, respond)
     {
         respond(oauth.hasToken());
     }
+    else if (request.request == "log_out")
+    {
+        oauth.clearTokens();
+        respond();
+    }
 });
 
 // shorten/expand a URL

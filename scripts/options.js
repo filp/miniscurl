@@ -87,7 +87,15 @@ $(function()
     {
         chrome.extension.sendRequest({ request: "auth" }, function()
         {
-            
+            authed();
+        });
+    });
+
+    $("button#logout").click(function()
+    {
+        chrome.extension.sendRequest({ request: "log_out" }, function()
+        {
+            logout();
         });
     });
 });
@@ -191,7 +199,7 @@ function credentials_update()
     if (cur_service_id == "googl")
     {
         $("div#credential_inputs").hide();
-        $("button#authorize").show();
+        $("button#authorize").css("display", "inline");
         chrome.extension.sendRequest({ request: "is_authed" }, function(is_authed)
         {
             if (is_authed)
@@ -240,5 +248,15 @@ function authed()
         color: "#000000",
         "background-color": "#BAFFBA",
     }).text(chrome.i18n.getMessage("options_button_authorized")).attr("disabled", true);
+    $("button#logout").css("display", "inline");
 }
     
+function logout()
+{
+    $("button#authorize").css(
+    {
+        color: "#EAF7E6",
+        "background-color": "#4B4B4B",
+    }).text(chrome.i18n.getMessage("options_button_authorize")).attr("disabled", false);
+    $("button#logout").hide();
+}

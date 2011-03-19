@@ -342,6 +342,10 @@
     {
         "message": "Authorized!"
     },
+    "options_button_logout":
+    {
+        "message": "Log Out"
+    },
 
 
 
