@@ -334,6 +334,14 @@
     {
         "message": "Recommended"
     },
+    "options_button_authorize":
+    {
+        "message": "Authorize"
+    },
+    "options_button_authorized":
+    {
+        "message": "Authorized!"
+    },
 
 
 

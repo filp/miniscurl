@@ -20,6 +20,6 @@
     {
         "keyword": "mini"
     },
-    "permissions": ["http://*/*", "contextMenus", "tabs", "chrome://favicon/"],
+    "permissions": ["http://*/*", "https://*/*", "contextMenus", "tabs", "chrome://favicon/"],
     "default_locale": "en"
 }

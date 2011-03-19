@@ -323,6 +323,11 @@ button#new-service
     top: -32px;
 }
 
+button#authorize
+{
+    dislay: none;
+}
+
 hr
 {
 	color: #A0A0A0;
@@ -339,7 +344,7 @@ div#listhelper
     margin-bottom: 5px;
 }
 
-div#button
+div.button
 {
     width: 125px;
     margin: 0 auto;

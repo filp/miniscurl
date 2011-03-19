@@ -45,21 +45,22 @@ function get_services()
         {
             name: "Goo.gl",
             site: "http://goo.gl",
+            account: [1, 1, 0],
             categories: ["shortening", "recommended"],
             
-            url: "http://goo.gl/api/shorten",
-            method: "POST",
-            datatype: "json",
-            done: function(data, raw, url, xhr)
+            custom: function(url, user, pass, api, callback)
             {
-                if ("short_url" in data)
+                request = {
+                    method: "POST",
+                    parameters: { key: "AIzaSyAluXX4E8fX_uC-3BYLhH42vKqesIcmXLA" },
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ longUrl: url }),
+                };
+                oauth.sendSignedRequest("https://www.googleapis.com/urlshortener/v1/url", function(raw, xhr)
                 {
-                    return { status: true, msg: data.short_url };
-                }
-                else
-                {
-                    return { status: false, msg: data.error_message };
-                }
+                    data = JSON.parse(raw);
+                    callback({ status: true, msg: data.id });
+                }, request);
             },
         },
         bitly:

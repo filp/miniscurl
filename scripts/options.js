@@ -82,6 +82,19 @@ $(function()
         $("button#save").text(chrome.i18n.getMessage("options_button_saved"));
         setTimeout('$("button#save").text(chrome.i18n.getMessage("options_button_save"));', 5000);
     });
+
+    $("button#authorize").click(function()
+    {
+        console.log("ohai");
+        chrome.extension.sendRequest({ request: "auth" }, function()
+        {
+            $("button#authorize").css(
+            {
+                color: "#4B4B4B",
+                "background-color": "#DCFFDC",
+            }).text(chrome.i18n.getMessage("options_button_authorized")).attr("disabled", true);
+        });
+    });
 });
 
 // a tab is clicked
@@ -179,7 +192,19 @@ function load_credentials_tab()
 
 function credentials_update()
 {
-    cur_service = get_service($("select#credential_service").val());
+    cur_service_id = $("select#credential_service").val();
+    if (cur_service_id == "googl")
+    {
+        $("div#credential_inputs").hide();
+        $("button#authorize").show();
+        return;
+    }
+    else
+    {
+        $("button#authorize").hide();
+        $("div#credential_inputs").show();
+    }
+    cur_service = get_service(cur_service_id);
     if (cur_service.account[0] > 0)
     {
         $("input#user").show().val(cur_service.username).prev().show().children().text(chrome.i18n.getMessage(cur_service.account[0] == 1 ? "options_required" : "options_optional"));

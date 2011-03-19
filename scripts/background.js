@@ -18,13 +18,23 @@ default_settings =
     use_default: true,
     quick_mode: false,
 };
-var services;
+var services, oauth;
 
 // initialize
 $(function()
 {
     init_settings();
     create_menu();
+
+    oauth = ChromeExOAuth.initBackgroundPage({
+        'request_url': 'https://www.google.com/accounts/OAuthGetRequestToken',
+        'authorize_url': 'https://www.google.com/accounts/OAuthAuthorizeToken',
+        'access_url': 'https://www.google.com/accounts/OAuthGetAccessToken',
+        'consumer_key': 'anonymous',
+        'consumer_secret': 'anonymous',
+        'scope': 'https://www.googleapis.com/auth/urlshortener',
+        'app_name': 'Miniscurl URL Shortener/Expander'
+    });
 });
 
 // handle messages
@@ -46,6 +56,10 @@ chrome.extension.onRequest.addListener(function(request, sender, respond)
     else if (request.request == "copy")
     {
         to_clipboard(request.data);
+    }
+    else if (request.request == "auth")
+    {
+        oauth.authorize(respond);
     }
 });
 
