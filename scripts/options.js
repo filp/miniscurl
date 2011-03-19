@@ -245,8 +245,7 @@ function authed()
 {
     $("button#authorize").css(
     {
-        color: "#000000",
-        "background-color": "#BAFFBA",
+        color: "#BAFFBA",
     }).text(chrome.i18n.getMessage("options_button_authorized")).attr("disabled", true);
     $("button#logout").css("display", "inline");
 }
@@ -256,7 +255,6 @@ function logout()
     $("button#authorize").css(
     {
         color: "#EAF7E6",
-        "background-color": "#4B4B4B",
     }).text(chrome.i18n.getMessage("options_button_authorize")).attr("disabled", false);
     $("button#logout").hide();
 }
