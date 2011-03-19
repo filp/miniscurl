@@ -257,9 +257,161 @@ function get_services()
             site: "http://url.ie",
             
             url: "http://url.ie/site/api/tinyurl/create/",
-            done: function (raw, parsed, url, xhr)
+        },
+        btgd:
+        {
+            name: "bt.gd",
+            site: "http://bt.gd",
+            
+            url: "http://bt.gd/shorten",
+        },
+        budurl:
+        {
+            name: "budurl.com",
+            site: "http://budurl.com",
+            account: [ 0, 0, 1 ],
+            register: "http://budurl.com/?register",
+            
+            url: "http://budurl.com/api/v1/budurls/shrink",
+            data: function(url, user, pass, api)
             {
-                return { status: raw.substring(0,4) == "http", msg: raw };
+                ret = { "long_url": url };
+                if (api != "")
+                {
+                    ret["api_key"] = api;
+                }
+                return ret;
+            },
+            datatype: "json",
+            done: function (data, raw, url, xhr)
+            {
+                if (parsed.success == 1)
+                {
+                    return { status: true, msg: data.budurl };
+                }
+                else
+                {
+                    return { status: false, msg: data.error_message };
+                }
+                
+            },
+        },
+        canurl:
+        {
+            name: "canurl.com",
+            site: "http://canurl.com",
+            
+            url: "http://canurl.com/api.php",
+        },
+        cligs:
+        {
+            name: "cli.gs",
+            site: "http://cli.gs",
+            account: [ 0, 0, 2 ],
+            register: "http://cli.gs/user/new",
+            categories: ["shortening", "recommended"],
+            
+            url: "http://cli.gs/api/v1/cligs/create",
+            data: function(url, user, pass, api)
+            {
+                return "url=" + url + (api != "" ? "&key=" + api : "") + "&appid=%3Ca+href%3D%22https%3A%2F%2Fchrome.google.com%2Fextensions%2Fdetail%2Feclilalbnmdonojgjmkekinflhodgoii%22%3EMiniscurl%3C%2Fa%3E";
+            },
+        },
+        chilpit:
+        {
+            name: "chilp.it",
+            site: "http://chilp.it",
+            url: "http://chilp.it/api.php",
+        },
+        cogela:
+        {
+            name: "coge.la",
+            site: "http://coge.la",
+            account: [ 2, 2, 0 ],
+            register: "http://coge.la/altausuarios.php",
+        
+            url: "http://coge.la/api.php",
+            data: function (url, user, pass, api)
+            {
+                return "url=" + url + (user != "" && pass != "" ? "&user=" + user + "&password=" + pass : "");
+            },
+        },
+        durl:
+        {
+            name: "durl.me",
+            site: "http://durl.me",
+            
+            url: "http://durl.me/api/Create.do",
+            datatype: "json",
+            data: "longurl=%URL%&type=json",
+            done: function (data, raw, url, xhr)
+            {
+                if (data.status == "ok")
+                {
+                    return { "status" : true, "msg" : data.shortUrl };
+                }
+                else
+                {
+                    return { "status" : false, "msg" : "Error" };
+                }
+            
+            },
+        },
+        ez:
+        {
+            name: "ez.com",
+            site: "http://ez.com",
+            account: [ 0, 0, 1 ],
+            register: "http://ez.com/?register",
+            
+            url: "http://ez.com/api/v1/ezlinks/shrink",
+            datatype: "json",
+            data: function(url, user, pass, api)
+            {
+                return "long_url=" + url + (api != "" ? "&api_key=" + api : "");
+            },
+            done: function (data, raw, url, xhr)
+            {
+                if (parsed.success == 1)
+                {
+                    return { "status" : true, "msg" : data.ezlink };
+                }
+                else
+                {
+                    return { "status" : false, "msg" : data.error_message };
+                }
+                
+            },
+        },
+        foly:
+        {
+            name: "fo.ly",
+            site: "http://fo.ly",
+        
+            url: "http://api.fo.ly/shorten",
+            datatype: "json",
+            data: "longUrl=%URL%",
+            done: function (data, raw, url, xhr)
+            {
+                if (data.statusCode == "OK")
+                {
+                    for (var a in data.results)
+                    {
+                        if (a.substring(0,5) == "ERROR")
+                        {
+                            return { "status" : false, "msg" : a };
+                        }
+                        else
+                        {
+                            return { "status" : true, "msg" : data.results[a].shortUrl };
+                        }
+                    }
+                }
+                else
+                {
+                    return { "status" : false, "msg" : data.errorMessage };
+                }
+                
             },
         },
     };
