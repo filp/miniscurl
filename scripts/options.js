@@ -225,7 +225,7 @@ function credentials_update()
     }
     if (cur_service.account[1] > 0)
     {
-        $("input#pass").show().val(cur_service.password).prev().show().children().text(chrome.i18n.getMessage(cur_service.account[0] == 1 ? "options_required" : "options_optional"));
+        $("input#pass").show().val(cur_service.password).prev().show().children().text(chrome.i18n.getMessage(cur_service.account[1] == 1 ? "options_required" : "options_optional"));
     }
     else
     {
@@ -233,7 +233,7 @@ function credentials_update()
     }
     if (cur_service.account[2] > 0)
     {
-        $("input#api").show().val(cur_service.apikey).prev().show().children().text(chrome.i18n.getMessage(cur_service.account[0] == 1 ? "options_required" : "options_optional"));
+        $("input#api").show().val(cur_service.apikey).prev().show().children().text(chrome.i18n.getMessage(cur_service.account[2] == 1 ? "options_required" : "options_optional"));
     }
     else
     {
