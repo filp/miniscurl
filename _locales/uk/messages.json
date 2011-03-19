@@ -1,0 +1,444 @@
+{
+    "ajax_error":
+    {
+        "message": "Невідома помилка"
+    },
+    "ajax_timeout":
+    {
+        "message": "Таймаут сервісу"
+    },
+    "ajax_parsererror":
+    {
+        "message": "Помилка обробки даних"
+    },
+    "internal_error":
+    {
+        "message": "Внутрішня помилка"
+    },
+    "invalid_url":
+    {
+        "message": "Неправильна ссилка"
+    },
+   
+   
+   
+   
+   
+    "menu_shorten_this":
+    {
+        "message": "Скоротити"
+    },
+    "menu_shorten_any":
+    {
+        "message": "Скоротити будь який..."
+    },
+    "menu_shorten_tab":
+    {
+        "message": "Скоротити закладку"
+    },
+    "menu_expand_this":
+    {
+        "message": "Розширити"
+    },
+    "menu_expand_any":
+    {
+        "message": "Розширити будь який..."
+    },
+    "prompt_shorten_url":
+    {
+        "message": "Введіть ссилку яку Ви хочете скоротити використовуючи $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "menu_configuration":
+    {
+        "message": "Налаштування"
+    },
+    "prompt_expand_url":
+    {
+        "message": "Введіть ссилку яку Ви хочете розширити використовуючи $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "prompt_shorten_successful":
+    {
+        "message": "Успішно скороченно ссилку використовуючи $SERVICE$. Натисніть OK щоб скопіювати ссилку в буфер обміну.\n\nПочаткова ссилка:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    "prompt_shorten_failed":
+    {
+        "message": "Виникла помилка при скороченні ссилки використовуючи $SERVICE$.\n\nПочаткова ссилка:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_successful":
+    {
+        "message": "Успішно розширено ссилку використовуючи $SERVICE$. Натисніть ОК щоб відкрити ссилку в новій закладці.\n\nПочаткова ссилка:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_failed":
+    {
+        "message": "Виникла помилка при розширенні ссилки використовуючи $SERVICE$.\n\nПочаткова ссилка:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+   
+   
+   
+   
+   
+    "popup_pick":
+    {
+        "message": "Оберіть сервіс"
+    },
+    "popup_shorten":
+    {
+        "message": "Скоротити використовуючи $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_expand":
+    {
+        "message": "Розширити використовуючи $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_cancel":
+    {
+        "message": "Відмінити"
+    },
+    "popup_copy":
+    {
+        "message": "Скопіювати у буфер обміну"
+    },
+    "popup_copied":
+    {
+        "message": "Скопійовано!"
+    },
+    "popup_another_url":
+    {
+        "message": "Оберіть іншу ссилку"
+    },
+    "popup_another_service":
+    {
+        "message": "Оберіть інший сервіс"
+    },
+   
+   
+   
+   
+   
+    "options_title":
+    {
+        "message": "Налаштування $NAME$",
+        "placeholders":
+        {
+            "name":
+            {
+                "content": "Miniscurl"
+            }
+        }
+    },
+    "options_tab_general":
+    {
+        "message": "Загальне"
+    },
+    "options_tab_popup":
+    {
+        "message": "Налаштування спливаючих повідомлень"
+    },
+    "options_tab_credentials":
+    {
+        "message": "Обліковий запис"
+    },
+    "options_tab_custom":
+    {
+        "message": "Власні сервіси"
+    },
+    "options_button_save":
+    {
+        "message": "Зберегти"
+    },
+    "options_button_saved":
+    {
+        "message": "Збережено!"
+    },
+    "options_button_new":
+    {
+        "message": "Новий"
+    },
+    "options_button_delete":
+    {
+        "message": "Видалити"
+    },
+    "options_label_shortener":
+    {
+        "message": "Скорочувач за замовчуванням"
+    },
+    "options_label_expander":
+    {
+        "message": "Розширювач  за замовчуванням"
+    },
+    "options_label_enabled":
+    {
+        "message": "Ввімкнені сервіси"
+    },
+    "options_label_use_default":
+    {
+        "message": "Використати сервіс за замовчуванням"
+    },
+    "options_label_use_default_small":
+    {
+        "message": "Автоматично обирати сервіс за замовчуванням для виконання бажаної дії, замість вибору сервісу вручну"
+    },
+    "options_shorten":
+    {
+        "message": "Скоротити"
+    },
+   
+    "options_expand":
+    {
+        "message": "Розширити"
+    },
+    "options_label_quick_mode":
+    {
+        "message": "Швидкий режим"
+    },
+    "options_label_quick_mode_small":
+    {
+        "message": "Автоматично використовувати поточну закладку для сервісів скорочення"
+    },
+    "options_label_auto_copy":
+    {
+        "message": "Авто-копіювання"
+    },
+    "options_label_auto_copy_small":
+    {
+        "message": "Автоматично копіює скорочену/розширену ссилку в буфер обміну"
+    },
+    "options_label_service":
+    {
+        "message": "Сервіс"
+    },
+    "options_label_username":
+    {
+        "message": "Ім'я"
+    },
+    "options_label_password":
+    {
+        "message": "Пароль"
+    },
+    "options_label_api_key":
+    {
+        "message": "Ключ API"
+    },
+    "options_label_service_id":
+    {
+        "message": "Ідентифікатор сервісу"
+    },
+    "options_label_service_id_small":
+    {
+        "message": "Унікальний ідентифікатор для створюваного сервісу"
+    },
+    "options_label_edit":
+    {
+        "message": "Редагувати"
+    },
+    "options_custom_help":
+    {
+        "message": "Натисніть сюди щоб дізнатися про додавання власних сервісів до Miniscurl"
+    },
+    "options_required":
+    {
+        "message": "Необхідно"
+    },
+    "options_optional":
+    {
+        "message": "Необов'язково"
+    },
+    "options_category_all":
+    {
+        "message": "Усе"
+    },
+    "options_category_recommended":
+    {
+        "message": "Рекомендовано"
+    },
+    "options_button_authorize":
+    {
+        "message": "Авторизувати"
+    },
+    "options_button_authorized":
+    {
+        "message": "Авторизовано!"
+    },
+    "options_button_logout":
+    {
+        "message": "Вийти"
+    },
+ 
+ 
+ 
+ 
+ 
+    "omni_default_shorten":
+    {
+        "message": "Скоротити ссилку"
+    },
+    "omni_shorten_tab":
+    {
+        "message": "Скоротити поточну закладку"
+    },
+    "omni_default_expand":
+    {
+        "message": "Розширити ссилку"
+    },
+    "omni_specific_shorten":
+    {
+        "message": "Скоротити ссилку використовуючи $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "omni_specific_expand":
+    {
+        "message": "Розширити ссилку використовуючи $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "omni_invalid_command":
+    {
+        "message": "Неправильна команда або ідентифікатор сервісу: $COMMAND$",
+        "placeholders":
+        {
+            "command":
+            {
+                "content": "$1",
+                "example": "<any invalid command>"
+            }
+        }
+    },
+   
+ 
+   
+   
+   
+    "twitter_title":
+    {
+        "message": "Поділитися через Twitter"
+    },
+    "facebook_title":
+    {
+        "message": "Поділитися через Facebook"
+    },
+    "reddit_title":
+    {
+        "message": "Поділитися через Reddit"
+    },
+    "buzz_title":
+    {
+        "message": "Поділитися через Google Buzz"
+    },
+    "qr_title":
+    {
+        "message": "Отримати QR код"
+    },
+   
+ 
+ 
+ 
+ 
+    "expandurl_OK":
+    {
+        "message": "Ссилка нікуди не веде"
+    },
+    "expandurl_InvalidURL":
+    {
+        "message": "Неправильна ссилка"
+    },
+    "expandurl_InternalError":
+    {
+        "message": "Помилка серверу"
+    }
+}
