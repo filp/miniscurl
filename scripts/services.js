@@ -137,6 +137,43 @@ function get_services()
                 }
             },
         },
+        jmp:
+        {
+            name: "j.mp",
+            site: "http://j.mp",
+            register: "http://j.mp/a/sign_up",
+            account: [2, 0, 2],
+            
+            url: "http://api.j.mp/v3/shorten",
+            data: function(url, user, pass, api)
+            {
+                data =
+                {
+                    login: "miniscurl",
+                    apiKey: "R_de3a810fff9c90fd458c8e5c72b819d8",
+                    longUrl: url,
+                };
+                if (user != "" && api != "")
+                {
+                    data.x_login = user;
+                    data.x_apiKey = api;
+                }
+                return data;
+            },
+            method: "POST",
+            datatype: "json",
+            done: function(data, raw, url, xhr)
+            {
+                if (data.status_code > 200)
+                {
+                    return { status: false, msg: data.status_txt };
+                }
+                else
+                {
+                    return { status: true, msg: data.data.url };
+                }
+            },
+        },
         expandurl:
         {
             name: "ExpandURL",
@@ -443,6 +480,182 @@ function get_services()
                 }
                 
             },
+        },
+        idek:
+        {
+            name: "idek.net",
+            site: "http://idek.net",
+            register: "http://idek.net//userHome/register",
+            
+            url: "http://idek.net/shorten/",
+            data: "idek-api=true&idek-ref=Miniscurl&idek-url=%URL%",
+        },
+        ikrme:
+        {
+            name: "ikr.me",
+            url: "http://ikr.me",
+            account: [ 0, 2, 0 ],
+            
+            url: "http://iKr.me/api/",
+            data: function(url, user, pass, id)
+            {
+                return "url=" + url + (pass != "" ? "&pwd=" + pass : "");
+            },
+            done: function (data, raw, url, xhr)
+            {
+                return { "status" : raw.substring(6, 10) == "http", "msg" : raw.substring(6, raw.length-2) };
+            },
+        },
+        irpe:
+        {
+            name: "ir.pe",
+            site: "http://ir.pe",
+        
+            url: "http://ir.pe/",
+            data: "url=%URL%&api=1",
+        },
+        lnkby:
+        {
+            name: "lnk.by",
+            site: "http://lnk.by",
+            
+            url: "http://lnk.by/Shorten",
+            datatype: "json",
+            data: "url=%URL%&applicationId=miniscurl&format=json",
+            done: function (data, raw, url, xhr)
+            {
+                return { "status" : data.shortUrl.substring(0,4) == "http", "msg" : data.shortUrl };
+            },
+        },
+        longurl:
+        {
+            name: "LongURL.org",
+            url: "http://longurl.org",
+            categories: ["expanding"],
+            
+            url: "http://api.longurl.org/v2/expand",
+            datatype: "json"
+            data: "url=%URL%&format=json&user-agent=Miniscurl%2F" + VERSION,
+            done: function (data, raw, url, xhr)
+            {
+                if ("long-url" in data)
+                {
+                    return { status: true, msg: data["long-url"] };
+                }
+                else if ("messages" in data)
+                {
+                    return { status: false, msg: data.messages.message }
+                }
+            },
+        },
+        longurlplease:
+        {
+            name: "Long URL Please",
+            site: "http://longurlplease.com",
+            categories: ["expanding"],
+            
+            url: "http://longurlplease.appspot.com/api/v1.1",
+            datatype: "json",
+            data: "q=%URL%",
+            done: function (data, raw, url, xhr)
+            {
+                return { "status" : data[url] != null, "msg" : data[url] };
+            },
+        },
+        metamark:
+        {
+            name: "Metamark",
+            site: "http://metamark.net",
+            categories: ["shortening", "recommended"],
+
+            url: "http://metamark.net/api/rest/simple",
+            data: "long_url=%URL%",
+        },
+        migre:
+        {
+            name: "migre.me",
+            site: "http://migre.me",
+            
+            url: "http://migre.me/api.xml",
+            datatype: "xml",
+            done: function (data, raw, url, xhr)
+            {
+                if (data.getElementsByTagName("error")[0].childNodes[0].nodeValue == 0)
+                {
+                    return { "status" : true, "msg" : data.getElementsByTagName("migre")[0].childNodes[0].nodeValue };
+                }
+                else
+                {
+                    return { "status" : false, "msg" : data.getElementsByTagName("errormessage")[0].childNodes[0].nodeValue };
+                }
+            },
+        },
+        miudin:
+        {
+            name: "miud.in",
+            site: "http://miud.in",
+            
+            url: "http://miud.in/api-create.php",
+        },
+        nnnf:
+        {
+            name: "nn.nf",
+            site: "http://nn.nf",
+            
+            method: "POST",
+            url: "http://nn.nf/api.php",
+        },
+        rurl:
+        {
+            name: "rurl.org",
+            site: "http://rurl.org",
+            account: [ 0, 0, 1 ],
+            
+            method: "POST",
+            datatype: "xml",
+            url: "http://rurl.org/api/",
+            data: "url=%URL%&apikey=%API%",
+            done: function (data, raw, url, xhr)
+            {
+                if (data.getElementsByTagName("error")[0])
+                {
+                    return { "status" : false, "msg" : data.getElementsByTagName("error")[0].childNodes[0].nodeValue };
+                }
+                else
+                {
+                    return { "status" : true, "msg" : data.getElementsByTagName("url")[0].childNodes[0].nodeValue };
+                }
+            },
+        },
+        s8hk:
+        {
+            name: "s8.hk",
+            site: "http://s8.hk",
+            
+            url: "http://s8.hk/api/shorten",
+            datatype: "json",
+            data: "longUrl=%URL%&source=Miniscurl&format=json",
+            done: function (data, raw, url, xhr)
+            {
+                return { "status" : true, "msg" : data.shortUrl };
+                
+            },
+        },
+        safli:
+        {
+            name: "saf.li",
+            site: "http://saf.li",
+            
+            url: " http://saf.li/en/create",
+            data: "ws=1&url=%URL%",
+        },
+        samlain:
+        {
+            name: "samla.in",
+            site: "http://samla.in",
+            
+            url: "http://samla.in/",
+            data: "action=api&url=%URL%",
         },
     };
 
