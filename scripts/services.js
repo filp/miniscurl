@@ -50,17 +50,53 @@ function get_services()
             
             custom: function(url, user, pass, api, callback)
             {
+                endpoint = "https://www.googleapis.com/urlshortener/v1/url"
                 request = {
                     method: "POST",
                     parameters: { key: "AIzaSyAluXX4E8fX_uC-3BYLhH42vKqesIcmXLA" },
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ longUrl: url }),
                 };
-                oauth.sendSignedRequest("https://www.googleapis.com/urlshortener/v1/url", function(raw, xhr)
+                if (oauth.hasToken()) // send authorized request
                 {
-                    data = JSON.parse(raw);
-                    callback({ status: true, msg: data.id });
-                }, request);
+                    oauth.sendSignedRequest(endpoint, function(raw, xhr)
+                    {
+                        data = JSON.parse(raw);
+                        if ("error" in data)
+                        {
+                            if (data.error.code == 401)
+                            {
+                                oauth.clearTokens();
+                            }
+                            callback({ status: false, msg: data.error.message });
+                        }
+                        else
+                        {
+                            callback({ status: true, msg: data.id });
+                        }
+                    }, request);
+                }
+                else // send anonymous request
+                {
+                    $.ajax({
+                        type: "POST",
+                        url: endpoint + "?key=" + request.parameters.key,
+                        data: JSON.stringify({ longUrl: url }),
+                        contentType: "application/json",
+                        success: function(data, textStatus, xhr)
+                        {
+                            if ("error" in data)
+                            {
+                                callback({ status: false, msg: data.error.message });
+                            }
+                            else
+                            {
+                                callback({ status: true, msg: data.id });
+                            }
+                        },
+                        dataType: "json",
+                    });
+                }
             },
         },
         bitly:
