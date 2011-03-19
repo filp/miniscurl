@@ -43,6 +43,7 @@ $(function()
 
                 if (get_config("quick_mode"))
                 {
+                    doc.input.css("background-color", "#FFF");
                     $("div#another_url, div#sharers").hide();
                     $("div#list").hide();
                     $("div#main").show();
