@@ -40,7 +40,22 @@ $(function()
             {
                 cur_service_id = $(this).attr("name");
                 cur_service = get_service(cur_service_id);
-                get_url();
+
+                if (get_config("quick_mode"))
+                {
+                    $("div#another_url, div#sharers").hide();
+                    $("div#list").hide();
+                    $("div#main").show();
+                    chrome.tabs.getSelected(null, function(tab)
+                    {
+                        doc.input.val(tab.url);
+                        handle_url();
+                    });
+                }
+                else
+                {
+                    get_url();
+                }
             }).append('<img src="chrome://favicon/' + service.site + '">').append("<span></span>").children().last().text(service.name);
         }
     });
@@ -162,8 +177,9 @@ function get_url()
         $("div#main").show();
         doc.input.select().focus();
     });
+
     set_icon("chrome://favicon/" + cur_service.site);
-    
+
     if (cur_service.categories.indexOf("expanding") >= 0)
     {
         doc.button.text(chrome.i18n.getMessage("popup_expand", cur_service.name));
