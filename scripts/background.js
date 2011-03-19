@@ -61,6 +61,10 @@ chrome.extension.onRequest.addListener(function(request, sender, respond)
     {
         oauth.authorize(respond);
     }
+    else if (request.request == "is_authed")
+    {
+        respond(oauth.hasToken());
+    }
 });
 
 // shorten/expand a URL

@@ -85,14 +85,9 @@ $(function()
 
     $("button#authorize").click(function()
     {
-        console.log("ohai");
         chrome.extension.sendRequest({ request: "auth" }, function()
         {
-            $("button#authorize").css(
-            {
-                color: "#4B4B4B",
-                "background-color": "#DCFFDC",
-            }).text(chrome.i18n.getMessage("options_button_authorized")).attr("disabled", true);
+            
         });
     });
 });
@@ -197,6 +192,13 @@ function credentials_update()
     {
         $("div#credential_inputs").hide();
         $("button#authorize").show();
+        chrome.extension.sendRequest({ request: "is_authed" }, function(is_authed)
+        {
+            if (is_authed)
+            {
+                authed();
+            }
+        });
         return;
     }
     else
@@ -229,5 +231,14 @@ function credentials_update()
     {
         $("input#api").hide().prev().hide()
     }
-}    
+}
+
+function authed()
+{
+    $("button#authorize").css(
+    {
+        color: "#000000",
+        "background-color": "#BAFFBA",
+    }).text(chrome.i18n.getMessage("options_button_authorized")).attr("disabled", true);
+}
     
