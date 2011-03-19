@@ -30,7 +30,7 @@ function get_services()
         },
         niggr:
         {
-            name: "Nig.gr",
+            name: "nig.gr",
             site: "http://nig.gr",
             
             custom: function(url, user, pass, api, callback)
@@ -43,7 +43,7 @@ function get_services()
         },
         googl:
         {
-            name: "Goo.gl",
+            name: "goo.gl",
             site: "http://goo.gl",
             account: [1, 1, 0],
             categories: ["shortening", "recommended"],
@@ -65,7 +65,7 @@ function get_services()
         },
         bitly:
         {
-            name: "Bit.ly",
+            name: "bit.ly",
             site: "http://bit.ly",
             register: "http://bit.ly/a/sign_up",
             account: [2, 0, 2],
@@ -268,7 +268,7 @@ function get_services()
         },
         budurl:
         {
-            name: "budurl.com",
+            name: "BudURL",
             site: "http://budurl.com",
             account: [ 0, 0, 1 ],
             register: "http://budurl.com/?register",
@@ -296,13 +296,6 @@ function get_services()
                 }
                 
             },
-        },
-        canurl:
-        {
-            name: "canurl.com",
-            site: "http://canurl.com",
-            
-            url: "http://canurl.com/api.php",
         },
         cligs:
         {
