@@ -1,0 +1,444 @@
+{
+    "ajax_error":
+    {
+        "message": "Erro desconhecido"
+    },
+    "ajax_timeout":
+    {
+        "message": "O serviço demorou demasiado tempo a responder"
+    },
+    "ajax_parsererror":
+    {
+        "message": "Erro a interpretar os dados"
+    },
+    "internal_error":
+    {
+        "message": "Erro interno"
+    },
+    "invalid_url":
+    {
+        "message": "URL inválido"
+    },
+    
+    
+    
+    
+    
+    "menu_shorten_this":
+    {
+        "message": "Encurtar isto"
+    },
+    "menu_shorten_any":
+    {
+        "message": "Encurtar qualquer..."
+    },
+    "menu_shorten_tab":
+    {
+        "message": "Encurtar tab actual"
+    },
+    "menu_expand_this":
+    {
+        "message": "Expandir isto"
+    },
+    "menu_expand_any":
+    {
+        "message": "Expandir qualquer..."
+    },
+    "prompt_shorten_url":
+    {
+        "message": "Insere o URL que pretendes encurtar usando $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "menu_configuration":
+    {
+        "message": "Configuração"
+    },
+    "prompt_expand_url":
+    {
+        "message": "Insere o URL que pretendes expandir usando $SERVICE$.",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "prompt_shorten_successful":
+    {
+        "message": "URL encurtado com sucesso usando $SERVICE$. Clica OK para copiar o URL.\n\nURL original:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    "prompt_shorten_failed":
+    {
+        "message": "Ocorreu um erro ao tentar encurtar o URL usando $SERVICE$.\n\nURL original:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_successful":
+    {
+        "message": "URL expandido com sucesso usando $SERVICE$. Clica OK para abrir o URL numa nova tab.\n\nURL original:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://bit.ly/miniscurl"
+            }
+        }
+    },
+    "prompt_expand_failed":
+    {
+        "message": "Ocorreu um erro ao tentar expandir o URL usando $SERVICE$.\n\nURL original:\n$ORIGINAL$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            },
+            "original":
+            {
+                "content": "$2",
+                "example": "http://google.com"
+            }
+        }
+    },
+    
+    
+    
+    
+    
+    "popup_pick":
+    {
+        "message": "Escolhe um serviço"
+    },
+    "popup_shorten":
+    {
+        "message": "Encurtar usando $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_expand":
+    {
+        "message": "Expandir usando $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "popup_cancel":
+    {
+        "message": "Cancelar"
+    },
+    "popup_copy":
+    {
+        "message": "Copiar"
+    },
+    "popup_copied":
+    {
+        "message": "Copiado!"
+    },
+    "popup_another_url":
+    {
+        "message": "Tentar com outro URL"
+    },
+    "popup_another_service":
+    {
+        "message": "Tentar outro serviço"
+    },
+    
+    
+    
+    
+    
+    "options_title":
+    {
+        "message": "Opções para $NAME$",
+        "placeholders":
+        {
+            "name":
+            {
+                "content": "Miniscurl"
+            }
+        }
+    },
+    "options_tab_general":
+    {
+        "message": "Geral"
+    },
+    "options_tab_popup":
+    {
+        "message": "Opções de Popups"
+    },
+    "options_tab_credentials":
+    {
+        "message": "Credenciais"
+    },
+    "options_tab_custom":
+    {
+        "message": "Serviços Personalizados"
+    },
+    "options_button_save":
+    {
+        "message": "Salvar"
+    },
+    "options_button_saved":
+    {
+        "message": "Salvo!"
+    },
+    "options_button_new":
+    {
+        "message": "Novo"
+    },
+    "options_button_delete":
+    {
+        "message": "Apagar"
+    },
+    "options_label_shortener":
+    {
+        "message": "Encurtador padrão"
+    },
+    "options_label_expander":
+    {
+        "message": "Expansor padrão"
+    },
+    "options_label_enabled":
+    {
+        "message": "Serviços activos"
+    },
+    "options_label_use_default":
+    {
+        "message": "Utilizar serviço padrão"
+    },
+    "options_label_use_default_small":
+    {
+        "message": "Escolhe automaticamente o serviço padrão para a acção preferida, em vez de pedir que escolha um manualmente"
+    },
+    "options_shorten":
+    {
+        "message": "Encurtar"
+    },
+    
+    "options_expand":
+    {
+        "message": "Expandir"
+    },
+    "options_label_quick_mode":
+    {
+        "message": "Modo rápido"
+    },
+    "options_label_quick_mode_small":
+    {
+        "message": "Usa automaticamente a tab actual para os serviços de encurtamento"
+    },
+    "options_label_auto_copy":
+    {
+        "message": "Auto-copy"
+    },
+    "options_label_auto_copy_small":
+    {
+        "message": "Copía automaticamente o URL expandido/encurtado"
+    },
+    "options_label_service":
+    {
+        "message": "Serviço"
+    },
+    "options_label_username":
+    {
+        "message": "Nome de utilizador"
+    },
+    "options_label_password":
+    {
+        "message": "Password"
+    },
+    "options_label_api_key":
+    {
+        "message": "Chave de API"
+    },
+    "options_label_service_id":
+    {
+        "message": "ID de serviço"
+    },
+    "options_label_service_id_small":
+    {
+        "message": "Uma chave única (ID) para o serviço a criar"
+    },
+    "options_label_edit":
+    {
+        "message": "Editar"
+    },
+    "options_custom_help":
+    {
+        "message": "Clique aqui para ver documentação sobre adicionar serviços ao Miniscurl"
+    },
+    "options_required":
+    {
+        "message": "Obrigatório"
+    },
+    "options_optional":
+    {
+        "message": "Opcional"
+    },
+    "options_category_all":
+    {
+        "message": "Todos"
+    },
+    "options_category_recommended":
+    {
+        "message": "Recomendado"
+    },
+    "options_button_authorize":
+    {
+        "message": "Autorizar"
+    },
+    "options_button_authorized":
+    {
+        "message": "Autorizado!"
+    },
+    "options_button_logout":
+    {
+        "message": "Log Out"
+    },
+
+
+
+
+
+    "omni_default_shorten":
+    {
+        "message": "Encurtar URL"
+    },
+    "omni_shorten_tab":
+    {
+        "message": "Encurtar tab actual"
+    },
+    "omni_default_expand":
+    {
+        "message": "Expandir URL"
+    },
+    "omni_specific_shorten":
+    {
+        "message": "Encurtar URL usando $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "TinyURL"
+            }
+        }
+    },
+    "omni_specific_expand":
+    {
+        "message": "Expandir URL usando $SERVICE$",
+        "placeholders":
+        {
+            "service":
+            {
+                "content": "$1",
+                "example": "ExpandURL"
+            }
+        }
+    },
+    "omni_invalid_command":
+    {
+        "message": "Comando ou ID de serviço inválido: $COMMAND$",
+        "placeholders":
+        {
+            "command":
+            {
+                "content": "$1",
+                "example": "<any invalid command>"
+            }
+        }
+    },
+    
+
+    
+    
+    
+    "twitter_title":
+    {
+        "message": "Partilhar no Twitter"
+    },
+    "facebook_title":
+    {
+        "message": "Partilhar no Facebook"
+    },
+    "reddit_title":
+    {
+        "message": "Partilhar no Reddit"
+    },
+    "buzz_title":
+    {
+        "message": "Partilhar no Google Buzz"
+    },
+    "qr_title":
+    {
+        "message": "Ver código QR"
+    },
+    
+
+
+
+
+    "expandurl_OK":
+    {
+        "message": "O URL não leva a lado algum"
+    },
+    "expandurl_InvalidURL":
+    {
+        "message": "URL inválido"
+    },
+    "expandurl_InternalError":
+    {
+        "message": "Erro de servidor"
+    }
+}
